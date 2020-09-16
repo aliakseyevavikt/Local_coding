@@ -1,0 +1,85 @@
+{
+ "main": {
+   "header": "Adaptive learning platform"
+ },
+  "registration": {
+    "title": "Local Coding",
+    "header": "Create an account",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "password": "Password",
+    "termsOfAgreement": "Terms and agreements"
+  },
+  "login": {
+    "header": "Welcome back!",
+    "emailInput": "Email",
+    "passwordInput": "Password",
+    "noAccount": "Don't have an account?",
+    "newAccount": "Create one.",
+    "forgotPassword": "Forgot your password?",
+    "registerLink": "Create one",
+    "resetLink": "Reset it",
+    "loginBtn": "Log in"
+  },
+
+  "correctEmail": {
+    "email": "test@qa6.us"
+  },
+
+  "incorrectEmail": {
+    "email": "qwerty@qwerty.net"
+  },
+
+  "error": {
+    "errorMessage": "User not found"
+  },
+
+  "header": {
+    "headerRegister": "Create an account"
+  },
+
+  "text": {
+    "headerText": "Welcome back!"
+},
+
+  "registrationPage2": {
+    "title": "Dear \nPlease complete these fields",
+    "countryLabel": "Country",
+    "countryInputField": "United States",
+    "phoneLabel": "Phone",
+    "submitBtn": "Submit",
+    "skipLink": "Skip",
+    "phonePlaceHolder": "phone number"
+
+  },
+
+  "profile": {
+    "paragraph1": "About",
+    "paragraph2": "Goals",
+    "paragraph3": "Completed Codewars Katas",
+    "paragraph4": "Daily reports0",
+    "updateListBtn": "Update List",
+    "createDayReportBtn": "Create day report",
+    "contactUsLink": "contact us.",
+    "termsOfServiceLink": "Terms of Service",
+    "privacyPolicyLink": "Privacy Policy"
+  },
+
+  "footer": {
+    "homePageData": "Local Coding community",
+    "footerText": "If you have any questions or concerns, please contact us.\nTerms of Service Privacy Policy",
+    "contactUsPage": "Contact us",
+    "termsOfServicePage": "Terms of Service",
+    "privacyPolicyPage": "PASV Privacy Policy"
+  },
+
+  "resetPassword": {
+    "errorMessage": "'email' is not a valid email",
+    "required": "Required"
+  },
+
+  "termsAndAgreement": {
+    "title" : "Terms and agreements"
+  }
+}

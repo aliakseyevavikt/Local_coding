@@ -1,0 +1,1922 @@
+{
+	"info": {
+		"_postman_id": "c0bc4d4b-c1e8-4294-ae6b-63b3566318f3",
+		"name": "Local Cooding group20609 NEGATIVE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Register [new] Positive",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6148334f-7b89-49f7-bce8-d03809eee1cf",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Correct message displayed\", function () {",
+							"    pm.expect(message).eq(\"User created successfully. Please check your email and verify it\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e0d09079-6ef2-4118-a59d-574eb7df3462",
+						"exec": [
+							"pm.environment.set(\"emailUserNew\", pm.variables.replaceIn(\"{{$randomEmail}}\"));\r",
+							"pm.environment.set(\"passwordUserNew\", pm.variables.replaceIn(\"{{$randomPassword}}\"));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"{{emailUserNew}}\",\r\n    \"password\": \"{{passwordUserNew}}\",\r\n    \"firstName\": \"New\",\r\n    \"lastName\": \"User\",\r\n    \"phone\": \"14151234567\",\r\n    \"about\": \"123123\",\r\n    \"goals\": \"123123\",\r\n    \"englishLevel\": \"Advanced\",\r\n    \"countryName\": \"USA\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Register email exists Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e620964c-b986-4770-bd1d-842809cf308f",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Correct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"User with this e-mail exists\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 409\", function () {",
+							"    pm.response.to.have.status(409);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b23b44d0-5ed1-4e68-bc67-61f3e67c8b01",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"testadmin@pasv.us\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"firstName\": \"New\",\r\n    \"lastName\": \"User\",\r\n    \"phone\": \"14151234567\",\r\n    \"about\": \"123123\",\r\n    \"goals\": \"123123\",\r\n    \"englishLevel\": \"Advanced\",\r\n    \"countryName\": \"USA\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Register empty password Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f8ec353-51b3-473c-b396-c25a679e5d68",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Corerct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"Wrong password format\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b2d994da-b8ab-407d-b748-c7392d353332",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"{{emailUserNew}}\",\r\n    \"password\": \"\",\r\n    \"firstName\": \"New\",\r\n    \"lastName\": \"User\",\r\n    \"phone\": \"14151234567\",\r\n    \"about\": \"123123\",\r\n    \"goals\": \"123123\",\r\n    \"englishLevel\": \"Advanced\",\r\n    \"countryName\": \"USA\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Register empty lastName Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0f53d1ab-7195-4f1f-b436-84bf4d6da2d6",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Corerct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"User was not created\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3296189b-7bdd-4b31-ba8c-0c7e849908b3",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"firstName\": \"New\",\r\n    \"lastName\": \"\",\r\n    \"phone\": \"14151234567\",\r\n    \"about\": \"123123\",\r\n    \"goals\": \"123123\",\r\n    \"englishLevel\": \"Advanced\",\r\n    \"countryName\": \"USA\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Register  empty firstName Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0472c94-2ccd-408a-8377-0d858374be41",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Corerct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"User was not created\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7570e3ad-33b8-4e4a-8535-7b52309b4ea6",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"User\",\r\n    \"phone\": \"14151234567\",\r\n    \"about\": \"123123\",\r\n    \"goals\": \"123123\",\r\n    \"englishLevel\": \"Advanced\",\r\n    \"countryName\": \"USA\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login User New Positive",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "04f8bf82-c3fb-46ab-ae9b-dcdb746532d7",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.environment.set(\"tokenUserNew\", body.token);\r",
+							"pm.environment.set(\"userIdUserNew\", body.userId);\r",
+							"\r",
+							"pm.test(\"message is valid\", function () {\r",
+							"    pm.expect(message).eq(\"Auth success\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{emailUserNew}}\",\r\n    \"password\": \"{{passwordUserNew}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login [new] empty email Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "37e1ff07-aea3-4782-92c3-7fc356629fec",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Auth failed\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"{{passwordUserNew}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login [new] empty password Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "92b404bb-d686-4467-80be-e265b82f04bf",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Auth failed\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{emailUserNew}}\",\r\n    \"password\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login[new] empty email and password Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e827ab2a-41a3-439b-b7de-d908d99ec06d",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Auth failed\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login[new] wrong email  Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "da32b27b-c8d6-4fdc-9e4a-a21d0a926857",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Auth failed\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"wrongEmail@yahoo.com\",\r\n    \"password\": \"{{passwordUserNew}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login[new] wrong password Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a302eba0-025e-4341-a0e3-0e8b4b39e283",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Auth failed\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{emailUserNew}}\",\r\n    \"password\": \"wrongPassword\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login [admin] Positive",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0ea8e7ec-cbd6-4c76-8c8f-3ea4a150c90f",
+						"exec": [
+							"const body = pm.response.json();",
+							"",
+							"pm.environment.set(\"token\", body.token);",
+							"pm.environment.set(\"userId\", body.userId);",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "09c720c8-c5a1-4a7a-a936-0189a0f0a44b",
+						"exec": [
+							"pm.environment.set(\"emailAdmin\", pm.variables.replaceIn(\"testadmin@pasv.us\"));\r",
+							"pm.environment.set(\"passwordAdmin\", pm.variables.replaceIn(\"testAdmin\"));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{emailAdmin}}\",\r\n    \"password\": \"{{passwordAdmin}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Password Reset Request wrong email Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c597175d-018e-484e-af8c-cf1ade49f579",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"User not found\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"wrongEmail@yahoo.com\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/password/reset/request",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"password",
+						"reset",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Password Reset Request Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "19471141-c46d-4590-b8b1-dcbe11bab45e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{tokenUserNew}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"{{emailUserNew}}\"\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/password/reset/request",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"password",
+						"reset",
+						"request"
+					]
+				},
+				"description": "Due to this request we can get on email  reset password link. \r\nNext 4 requests are related to password reset procedure"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reset Password Hash by Admin Positive",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cde7edcc-96a2-4939-aec4-d337b9491f97",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const hash = body.payload.hash;\r",
+							"\r",
+							"pm.environment.set(\"newHash\", hash);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/user/hash/{{userIdUserNew}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"hash",
+						"{{userIdUserNew}}"
+					]
+				},
+				"description": "Due to this request we can get rest password hash history"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reset Password Hash [admin-> wrong ID] Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "53972ac7-f305-4625-bf0a-aebc5628d85a",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"User get hash error\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "288b1889-bbda-4d18-a375-83eb28fa0f7b",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/user/hash/{{wrongUserId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"hash",
+						"{{wrongUserId}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Is Valid Reset Links empty userId Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "50ffa34d-d730-487f-8346-db4a236d9981",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Invalid link\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"\",\r\n    \"hash\": \"{{newHash}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/password/reset/valid",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"password",
+						"reset",
+						"valid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Is Valid Reset Links empty hash Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c9a2d2de-a05f-454f-a659-278c4dc41d0b",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Invalid link\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"{{userIdUserNew}}\",\r\n    \"hash\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/password/reset/valid",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"password",
+						"reset",
+						"valid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Is Valid Reset Links empty userId and  hash Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "54f48fc0-d33b-4f62-9a5c-a69c4542fa38",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Invalid link\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"\",\r\n    \"hash\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/password/reset/valid",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"password",
+						"reset",
+						"valid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Password Reset New empty userId Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2d2b0774-96af-44e4-ae26-421fb398a167",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Change password error\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "218d0f71-4ef9-4474-8e79-6d6ab7e322a7",
+						"exec": [
+							"pm.environment.set(\"newPasswordReset\", \"111111\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"\",\r\n    \"hash\": \"{{newHash}}\",\r\n    \"password\": \"{{newPasswordReset}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/password/reset/new",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"password",
+						"reset",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Password Reset New empty hash Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "53e8cae8-4bbf-41e0-96d9-19709b3db431",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Wrong hash format\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "02e57892-e4b6-40ce-93ec-27a42f353ff7",
+						"exec": [
+							"pm.environment.set(\"newPasswordReset\", \"111111\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"{{userIdUserNew}}\",\r\n    \"hash\": \"\",\r\n    \"password\": \"{{newPasswordReset}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/password/reset/new",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"password",
+						"reset",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Password Reset New empty password Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "35a7d34a-ad4b-4d3d-8a01-4a6f75ba4edd",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Wrong password format\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "dbee7a1a-5d12-4afc-9d5e-ceb6017acb5d",
+						"exec": [
+							"pm.environment.set(\"newPasswordReset\", \"111111\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"{{userIdUserNew}}\",\r\n    \"hash\": \"{{newHash}}\",\r\n    \"password\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/password/reset/new",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"password",
+						"reset",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Re-Login [new] empty email Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "864785c4-7890-4d34-a459-d0ac44a2b4cc",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Corerct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"Auth failed\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"{{newPasswordReset}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Re-Login [new] empty password Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "376e51fa-a711-4d50-984a-b45a93c9eff6",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Corerct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"Auth failed\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 3000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{emailUserNew}}\",\r\n    \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Update Role By Id wrong ID Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "636a1efa-3f1b-4d22-ba91-a2bdc7dacb5c",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Corerct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"User update by id. Error\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n        \"roles\":  [  \"student\"  ]\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/{{wrongUserId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"{{wrongUserId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Update Role By Id empty body Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "edf99150-58e8-40c9-8a47-99a553732f0d",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Corerct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"Permission denied\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{tokenUserNew}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n       \r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user/{{userIdUserNew}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"{{userIdUserNew}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Get by ID [new] by Admin wrong userId Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c8b59235-5d54-40b0-84e1-54af47f07916",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Something went wrong. If it looks critical, please send a screenshot to support@pasv.us\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/user/{{wrongUserId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"{{wrongUserId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Get by ID [admin by new] Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "911ce248-740b-4ebf-82a2-d4c158de9bca",
+						"exec": [
+							"const body = pm.response.json();\r",
+							"const message = body.message;\r",
+							"\r",
+							"pm.test(\"Corerct error message displayed\", function () {\r",
+							"    pm.expect(message).eq(\"Auth failed\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{userIdUserNew}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/user/{{userId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Stats wrong token Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "560b46a7-5168-46ec-91db-0fcd23f1b4c7",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Corerct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"Auth failed\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 5000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{wrongToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/user/stats",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Get All Users with wrong token Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c14d669b-6962-41e6-b56f-72ed8a1c5d7a",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Corerct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"Permission denied\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 5000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{tokenUserNew}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Delete by Id [new] by  wrong token Negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a1d500bc-c27e-4017-b5ef-04744de84bf9",
+						"exec": [
+							"const body = pm.response.json();",
+							"const message = body.message;",
+							"",
+							"pm.test(\"Correct error message displayed\", function () {",
+							"    pm.expect(message).eq(\"Permission denied\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 5000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+							"});",
+							"",
+							"pm.environment.unset(\"token\");",
+							"pm.environment.unset(\"userId\");",
+							"pm.environment.unset(\"emailAdmin\");",
+							"pm.environment.unset(\"passwordAdmin\");",
+							"pm.environment.unset(\"emailRandom\");",
+							"pm.environment.unset(\"passwordRandom\");",
+							"pm.environment.unset(\"newToken\");",
+							"pm.environment.unset(\"newUserId\");",
+							"pm.environment.unset(\"allUsersBefore\");",
+							"pm.environment.unset(\"allUsers\");",
+							"pm.environment.unset(\"userIdUserNew\");",
+							"pm.environment.unset(\"tokenUserNew\");",
+							"pm.environment.unset(\"emailUserNew\");",
+							"pm.environment.unset(\"passwordUserNew\");",
+							"pm.environment.unset(\"newHash\");",
+							"pm.environment.unset(\"newPasswordReset\");",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{tokenUserNew}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/{{userIdUserNew}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"{{userIdUserNew}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

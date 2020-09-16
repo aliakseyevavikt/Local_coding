@@ -1,0 +1,28 @@
+{
+  "registerPageData": {
+    "header": "Create an account",
+    "agreementLabel":"I have readTerms and agreements",
+    "promptLabel": "Already have an account? Just click Log in."
+  },
+  "loginPageData": {
+    "header": "Welcome back!"
+  },
+  "homePageData": {
+    "header": "Local Coding community"
+  },
+
+  "footerText": "If you have any questions or concerns, please contact us.\nTerms of Service Privacy Policy",
+
+  "contactUsPage": {
+    "header": "Contact us"
+  },
+
+  "termsOfServicePage": {
+    "header": "Terms of Service"
+  },
+
+  "privacyPolicyPage": {
+    "header": "PASV Privacy Policy"
+  }
+
+}

@@ -1,0 +1,12 @@
+{
+  "header": "Welcome back!",
+  "emailPlaceholder": "Email",
+  "passwordPlaceholder": "Password",
+  "loginBtn": "Log in",
+  "registerAccountLink": "Create one",
+  "resetPasswordLink": "Reset it",
+  "registerAccountDescription": "Don’t have an account? Create one.",
+  "forgotPasswordDescription": "Forgot your password? Reset it.",
+  "signInWithGoogle": "Sign in with Google",
+  "signInWithFacebook": "Sign in with Facebook"
+}

@@ -1,0 +1,50 @@
+{
+  "userBadges": {
+    "admin": "admin",
+    "learner": "learner",
+    "student": "student",
+    "new": "new"
+  },
+  "pagesHeaders":
+  {
+    "homePageHeader": "Adaptive learning platform",
+    "contactUsHeader": "Contact us",
+    "privacyPolicyHeader": "PASV Privacy Policy",
+    "RegisterPageHeader": "Create an account",
+    "RegisterStep2PageHeader": "Please complete these fields",
+    "LoginHeader": "Welcome back!",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
+    "notValidEmailMessage": "'email' is not a valid email",
+    "Required": "Required",
+    "resetPasswordHeader": "Reset password",
+    "MainPageHeader" : "Adaptive learning platform",
+    "Base": "Base dashboard",
+    "Courses": "Courses",
+    "Cards": "Flash Cards",
+    "Diary": "Daily reports",
+    "Groups": "Groups",
+    "Users": "Users",
+    "Challenges": "Challenge",
+    "Telephony": "Telephony",
+    "Shop": "Products",
+    "Orders": "Orders",
+    "Achievements": "Achievements"
+  },
+  "newUserStep2": {
+    "h5firstPart": "Dear",
+    "h5secondPart": "\nPlease complete these fields"
+  },
+  "loginPage": {
+    "h1": "Welcome back!",
+    "siteName": "Local Coding",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password"
+  },
+  "resetPassword": {
+    "h1": "Reset password"
+  },
+  "HomePageHeader": {
+    "h1": "Adaptive learning platform"
+  }
+}

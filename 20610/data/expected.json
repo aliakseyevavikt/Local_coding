@@ -1,0 +1,94 @@
+{
+  "newUser": {
+    "h1": "Create an account",
+    "firstNamePlaceholder": "First Name",
+    "lastNamePlaceholder": "Last Name",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
+    "promptText": "Already have an account? Just click Log in."
+  },
+
+  "errorMsgs": {
+    "fieldErrorRequired": "Required",
+    "emailInvalidInput": "dasv",
+    "emailInvalidInputErrorMsg": "'email' is not a valid email"
+
+  },
+
+  "newUserStep2": {
+    "h5firstPart": "Dear",
+    "h5secondPart": "\nPlease complete these fields"
+  },
+
+  "loginPage": {
+    "h1": "Welcome back!",
+    "siteName": "Local Coding",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password"
+  },
+
+  "resetPassword": {
+    "h1": "Reset password"
+  },
+  "HomePageHeader": {
+    "h1": "Adaptive learning platform"
+  },
+
+  "userBadges": {
+    "admin": "admin",
+    "learner": "learner",
+    "student": "student",
+    "new": "new"
+  },
+
+  "linksData": {
+    "resumeText": "Google Doc resume link",
+    "linkedInText": "LinkedIn profile link",
+    "facebookText": "Facebook profile link",
+    "gitHubText": "GitHub profile link",
+    "codewarsText": "Codewars profile link",
+    "saveBtnText": "Save",
+    "resumeLink": "",
+    "linkedInLink": "",
+    "facebookLink": "",
+    "gitHubLink": "",
+    "codewarsLink": "",
+    "successMessage": "User Links updated",
+    "errorMessage": ""
+  },
+
+  "contactUsElementsDisplayed": {
+    "contactUsh1": "Contact us",
+    "textParagraph": "If you have any questions to us, please fill out and submit the following form",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "phonePlaceholder": "Cell phone number '17775551122' ",
+    "messagePlaceholder": "Message",
+    "submitBtn": "Submit",
+    "emptyNameFieldWarning": "Required",
+    "emailError": "'email' is not a valid email",
+    "emptyPhoneFieldWarning": "Required",
+    "submitConfirmation": "Your request was submitted!"
+  },
+
+  "ContactUsValues": {
+    "inputNameFieldValue": "Alex",
+    "shortEmail": "g@",
+    "dailyReportDifference": 1,
+    "": ""
+  },
+
+  "topMenuDashboards": {
+    "courses": "Courses",
+    "cards": "Flash Cards",
+    "diary": "Daily reports",
+    "groups": "Groups",
+    "users": "Users",
+    "challenge": "Challenge",
+    "shop": "Products",
+    "orders": "Orders",
+    "telephony": "Telephony",
+    "achievements": "Achievements"
+  }
+}
+
