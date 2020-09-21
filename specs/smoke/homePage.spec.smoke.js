@@ -5,7 +5,7 @@ import { loginPageTestResult } from '../../testResult/loginPage.testResult';
 import { registerPageTestResult } from '../../testResult/registerPage.testResult';
 
 describe('HOME PAGE SMOKE', function() {
-  before(() => {
+  beforeEach(() => {
     HomePage.open();
   });
 
@@ -15,7 +15,6 @@ describe('HOME PAGE SMOKE', function() {
   });
 
   it('Register button redirects to register page', function() {
-    HomePage.open();
     HomePage.registerBtn.click();
     expect(LoginPage.headerLogin.getText()).eq(registerPageTestResult.header);
   });
