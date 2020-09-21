@@ -10,7 +10,7 @@ import LoginPage from '../../../pageObjects/login.page';
 
 before(() => {
   HomePage.open();
-  HomePage.registerLink.click();
+  HomePage.registerBtn.click();
   RegisterPage.registerUser(user);
 });
 

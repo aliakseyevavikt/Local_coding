@@ -9,12 +9,12 @@ describe('', () => {
   });
 
   it('verify that Register link open Register Page', function () {
-    HomePage.registerLink.click();
+    HomePage.registerBtn.click();
     expect(RegisterPage.headerRegister.getText()).eq(expected.pagesHeaders.RegisterPageHeader);
   });
 
   it('verify that Login Link open Login Page', function () {
-    HomePage.loginLink.click();
+    HomePage.loginBtn.click();
     expect(LoginPage.header.getText()).contains(expected.pagesHeaders.LoginHeader);
   });
 });

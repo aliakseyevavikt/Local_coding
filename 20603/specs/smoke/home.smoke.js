@@ -9,12 +9,12 @@ describe('', () => {
   });
 
   it('TCS-001 - Verify that Register link open Register Page', function() {
-    HomePage.registerLink.click();
+    HomePage.registerBtn.click();
     expect(RegisterPage.headerRegister.getText()).eq(expected.registration.header);
   });
 
   it('TCS-002 - verify that Login Link open Login Page', function() {
-    HomePage.loginLink.click();
+    HomePage.loginBtn.click();
     expect(LoginPage.header.getText()).contains(expected.login.header);
   });
 

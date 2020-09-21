@@ -1,5 +1,6 @@
-const homePage = {
+const homePageTestResult = {
+  siteName: 'Local Coding',
   header: 'Adaptive learning platform',
 };
 
-export { homePage };
+export { homePageTestResult };
