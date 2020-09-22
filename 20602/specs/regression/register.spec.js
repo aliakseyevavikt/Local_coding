@@ -6,7 +6,7 @@ import user from '../../data/users';
 
 before(() => {
   HomePage.open();
-  HomePage.registerLink.click();
+  HomePage.registerBtn.click();
 });
 
 describe('TEST REGISTER PAGE ELEMENTS', () => {

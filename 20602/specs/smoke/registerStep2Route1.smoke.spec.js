@@ -9,7 +9,7 @@ import { getUserByEmail } from '../../helpers/getUserByEmail';
 
 before(() => {
   HomePage.open();
-  HomePage.registerLink.click();
+  HomePage.registerBtn.click();
   RegisterPage.registerUser(user);
 });
 

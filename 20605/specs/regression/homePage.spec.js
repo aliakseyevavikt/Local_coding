@@ -22,21 +22,21 @@ describe('HOME PAGE  ELEMENTS', function () {
   });
 
   it('TC-004 login button is clickable', function () {
-    expect(HomePage.loginLink.isClickable());
+    expect(HomePage.loginBtn.isClickable());
   });
 
   it('TC-005 redirect to login page ', function () {
-    HomePage.loginLink.click();
+    HomePage.loginBtn.click();
     expect(LoginPage.header.getText()).eq(loginPage.header);
   });
 
   it('TC-006 register button is clickable', function () {
     HomePage.open();
-    expect(HomePage.registerLink.isClickable());
+    expect(HomePage.registerBtn.isClickable());
   });
 
   it('TC-007 redirect to register page', function () {
-    HomePage.registerLink.click();
+    HomePage.registerBtn.click();
     expect(RegisterPage.header.getText()).eq(registerPageTestResult.header);
   });
 })

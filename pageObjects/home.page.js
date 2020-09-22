@@ -1,15 +1,20 @@
 import BasePage from './Base.page';
 
 class HomePage extends BasePage {
-  get registerLink() {
-    return $('[href="/user/register"]');
-  }
-  get loginLink() {
-    return $('[href="/user/login"]');
-  }
-
   get header() {
     return $('h1');
+  }
+
+  get registerBtn() {
+    return $('[data-qa="register"]');
+  }
+
+  get loginBtn() {
+    return $('[data-qa="login"]');
+  }
+
+  get image() {
+    return $('img');
   }
 
   open() {

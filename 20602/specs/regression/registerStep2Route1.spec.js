@@ -8,7 +8,7 @@ import waitTime from '../../../testData/waitTimes';
 
 before(() => {
   HomePage.open();
-  HomePage.registerLink.click();
+  HomePage.registerBtn.click();
   RegisterPage.registerUser(user);
 });
 

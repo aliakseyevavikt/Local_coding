@@ -10,12 +10,12 @@ describe('CHECK the HOME PAGE LINKS', () => {
   });
 
   it('HP01 Verify that Register link open Register Page',  () => {
-    HomePage.registerLink.click();
+    HomePage.registerBtn.click();
     expect(RegisterPage.headerRegister.getText()).eq(expected.pagesHeaders.RegisterPageHeader);
   });
 
   it('HP02 Verify that Login Link open Login Page', () => {
-    HomePage.loginLink.click();
+    HomePage.loginBtn.click();
     expect(LoginPage.header.getText()).contains(expected.pagesHeaders.LoginHeader);
   });
 });

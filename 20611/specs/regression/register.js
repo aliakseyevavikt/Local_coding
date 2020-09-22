@@ -13,7 +13,7 @@ describe('New user registration page', () => {
   });
 
   it('TC-003 Register link on Home Page, should take user to the Register page', function () {
-    HomePage.registerLink.click();
+    HomePage.registerBtn.click();
     expect(RegisterPage.email).to.exist;
   });
   it('TC-004 Check if the title of the page is Local Coding', () => {
