@@ -1,6 +1,6 @@
 import BasePage from './Base.page';
 import LoginPage from './login.page.js';
-import user from '../testData/user';
+import user from '../testData/userRoles';
 import TopMenuPage from './topMenu.page';
 
 class settingsProfilePage extends BasePage {

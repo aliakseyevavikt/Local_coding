@@ -1,5 +1,5 @@
 import LoginPage from "../../../pageObjects/login.page";
-import user from "../../../testData/user";
+import user from "../../../testData/userRoles";
 import {textLogin} from "../../data/loginData";
 import {studentData} from "../../data/usersData";
 import SettingsPasswordUpdatePage from "../../../pageObjects/settingsPassword.page";

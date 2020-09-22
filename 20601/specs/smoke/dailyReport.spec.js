@@ -1,5 +1,5 @@
 import DailyReportsPage from '../../../pageObjects/dailyReports.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import LoginPage from '../../../pageObjects/login.page';
 //import { textProfile } from '../../data/profile.data';
 import randomData from '../../data/daily.data';

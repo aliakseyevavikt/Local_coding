@@ -1,6 +1,6 @@
 import LoginPage from '../../../pageObjects/login.page';
 import ProfilePage from '../../../pageObjects/profile.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import expected from '../../data/expected.json';
 
 before(() => {

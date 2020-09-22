@@ -1,7 +1,7 @@
 import LoginPage from '../../../../pageObjects/login.page';
 import ProfilePage from '../../../../pageObjects/profile.page';
 import settingProfilePage from '../../../../pageObjects/settingsProfile.page';
-import user from '../../../../testData/user';
+import user from '../../../../testData/userRoles';
 import { clearValue } from '../../../helpers/clearValue';
 import { inputProfileSettings } from '../../../testData/inputProfileSettings';
 import { expectedProfileSettings } from '../../../testResult/expectedProfileSettings';

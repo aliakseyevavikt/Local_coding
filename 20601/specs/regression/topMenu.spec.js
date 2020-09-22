@@ -1,7 +1,7 @@
 import TopMenuPage from '../../../pageObjects/topMenu.page';
 import LoginPage from '../../../pageObjects/login.page';
 const Expected = require('../../data/expected.json').pagesHeaders;
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import WAIT_TIME_MEDIUM from '../../../testData/waitTimes';
 import ProfilePage from '../../../pageObjects/profile.page';
 

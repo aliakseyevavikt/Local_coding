@@ -1,7 +1,7 @@
 import RegisterPage from '../../../../pageObjects/register.page';
 import { negativeRegisterStep1 } from '../../../testData/register';
 import { newUser } from '../../../testData/register';
-import user from '../../../../testData/user';
+import user from '../../../../testData/userRoles';
 import { errorMessagesRegistration } from '../../../testResult/errorMessages';
 
 describe('REGISTER PAGE STEP-1 NEGATIVE', function () {

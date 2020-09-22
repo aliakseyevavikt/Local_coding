@@ -1,6 +1,6 @@
 import LoginPage from '../../../../pageObjects/login.page';
 import { WAIT_TIME_LONG } from '../../../../testData/waitTimes';
-const user = require('../../../../testData/user');
+const user = require('../../../../testData/userRoles');
 import { incorrectInput } from '../../../testData/login.funct';
 import { loginPage } from '../../../testResult/login.page.expected';
 

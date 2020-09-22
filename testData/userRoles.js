@@ -1,4 +1,4 @@
-const user = {
+const userRoles = {
   new: {
     email: 'new@qa6.us',
     password: 'newnew',
@@ -72,4 +72,4 @@ const user = {
   },
 };
 
-module.exports = user;
+module.exports = userRoles;

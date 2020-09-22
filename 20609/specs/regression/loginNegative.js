@@ -1,6 +1,6 @@
 import LoginPage from "../../../pageObjects/login.page";
 import {userNegativeData} from "../../data/userNegativeData";
-import user from "../../../testData/user";
+import user from "../../../testData/userRoles";
 
 describe ("LOGIN NEGATIVE", () => {
   before( () => {
