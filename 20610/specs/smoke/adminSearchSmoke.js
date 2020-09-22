@@ -1,5 +1,5 @@
 import LoginPage from '../../../pageObjects/login.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import AdminSearchForUsers from '../../../pageObjects/adminSearchForUsers';
 import clearInputValue from '../../../helpers/clearValueMethod';
 

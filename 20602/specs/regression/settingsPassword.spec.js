@@ -2,8 +2,8 @@ import LoginPage from '../../../pageObjects/login.page';
 import ProfilePage from '../../../pageObjects/profile.page';
 import SettingsPasswordPage from '../../../pageObjects/settingsPassword.page';
 import expected from '../../data/expected.json';
-import { newRole, admin } from '../../data/settingsPasswordData';
-import user from '../../data/users';
+import { newRole, admin } from '../../../testData/settingsPasswordData';
+import user from '../../../testData/userFake';
 import { WAIT_TIME_MEDIUM } from '../../../testData/waitTimes';
 
 before(() => {

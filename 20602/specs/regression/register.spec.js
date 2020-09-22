@@ -2,7 +2,7 @@ import HomePage from "../../../pageObjects/home.page";
 import expected from '../../data/expected.json';
 import LoginPage from "../../../pageObjects/login.page";
 import RegisterPage from "../../../pageObjects/register.page";
-import user from '../../data/users';
+import user from '../../../testData/userFake';
 
 before(() => {
   HomePage.open();

@@ -1,7 +1,4 @@
 import BasePage from './Base.page';
-import LoginPage from './login.page.js';
-import user from '../testData/user';
-import TopMenuPage from './topMenu.page';
 
 class settingsProfilePage extends BasePage {
   get firstNameIFTitle() {

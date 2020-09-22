@@ -8,7 +8,7 @@ import { userDelete } from '../../../helpers/deleteNewUserByAxios';
 import expected from '../../data/expected.json';
 import { userUpdateRole } from '../../helpers/userUpdateRole';
 import { userBadges } from '../../data/expected.json';
-import user from '../../../testData/user'
+import user from '../../../testData/userRoles'
 
 describe('NEW USER CHANGE PASSWORD', () => {
   before(function () {

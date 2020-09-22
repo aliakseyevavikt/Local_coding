@@ -1,6 +1,6 @@
 import LoginPage from '../../../../pageObjects/login.page';
 import topMenuPage from '../../../../pageObjects/topMenu.page'
-import user from '../../../../testData/user';
+import user from '../../../../testData/userRoles';
 
 describe('MAIN ELEMENTS ARE DISPLAYED for LEARNER', function () {
   before(() => {

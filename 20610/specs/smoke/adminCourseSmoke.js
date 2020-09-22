@@ -1,6 +1,6 @@
 import TopMenuPage from '../../../pageObjects/topMenu.page';
 import LoginPage from '../../../pageObjects/login.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import {newUser} from '../../../20610/data/fakeData';
 import AdminCourseCreation from '../../../pageObjects/adminCourseCreation'
 

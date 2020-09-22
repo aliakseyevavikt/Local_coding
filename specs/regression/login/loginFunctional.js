@@ -1,5 +1,5 @@
 import LoginPage from '../../../pageObjects/login.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import {anyNumbers, anySymbols, upperLowerLetters} from "../../../testData/login";
 
 describe('LOGIN PAGE (FUNCTIONAL)', function () {

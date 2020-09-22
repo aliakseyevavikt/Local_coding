@@ -1,5 +1,5 @@
 import LoginPage from '../../../pageObjects/login.page';
-import user from "../../../testData/user";
+import user from "../../../testData/userRoles";
 import TopMenuPage from "../../../pageObjects/topMenu.page";
 import WAIT_TIME_MEDIUM from '../../../testData/waitTimes';
 import {topMenuDashboard} from "../../data/topMenuData";
