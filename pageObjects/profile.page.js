@@ -3,7 +3,7 @@ import { WAIT_TIME_MEDIUM } from '../testData/waitTimes';
 
 class ProfilePage extends BasePage {
   get headerProfile() {
-    return $('//div[@class="ant-col ant-col-24"]//h1');
+    return $('h1');
   }
 
   get badgeRole() {
