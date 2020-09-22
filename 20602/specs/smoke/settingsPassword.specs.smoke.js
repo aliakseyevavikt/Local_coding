@@ -1,13 +1,13 @@
 import RegisterPage from '../../../pageObjects/register.page';
-import user from '../../data/users';
+import user from '../../../testData/userFake';
 import RegisterStep2 from '../../../pageObjects/registerStep2.page';
 import ProfilePage from '../../../pageObjects/profile.page';
 import SettingsPasswordPage from '../../../pageObjects/settingsPassword.page';
 import LoginPage from '../../../pageObjects/login.page';
 import { userDelete } from '../../../helpers/deleteNewUserByAxios';
 import expected from '../../data/expected.json';
-import { userUpdateRole } from '../../helpers/updateUserRoleByAxios';
-import { roles, admin } from '../../data/settingsPasswordData';
+import { userUpdateRole } from '../../../helpers/updateUserRoleByAxios';
+import { roles, admin } from '../../../testData/settingsPasswordData';
 
 describe('NEW USER CHANGE PASSWORD', function () {
   before(function () {

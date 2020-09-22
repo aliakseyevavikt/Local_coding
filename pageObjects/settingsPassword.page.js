@@ -1,5 +1,4 @@
 import BasePage from './Base.page';
-import { newUser } from '../20610/data/fakeData';
 
 class SettingsPasswordPage extends BasePage {
   get passwordTab() {

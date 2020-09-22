@@ -50,6 +50,7 @@ const userRoles = {
   learner: {
     email: 'learner@qa6.us',
     password: 'learner',
+    newPassword: 'learner1',
     firstName: 'LearnerFirst',
     lastName: 'LearnerLast',
     phone: '111234567890',

@@ -2,7 +2,7 @@ import BasePage from './Base.page';
 import LoginPage from './login.page.js';
 import user from '../testData/userRoles';
 import TopMenuPage from './topMenu.page';
-import users from '../20602/data/users';
+import users from '../testData/userFake';
 import ProfilePage from './profile.page';
 
 class ShippingAddressPage extends BasePage {
