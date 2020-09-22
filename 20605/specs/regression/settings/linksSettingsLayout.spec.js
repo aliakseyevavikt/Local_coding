@@ -1,5 +1,5 @@
 import LoginPage from '../../../../pageObjects/login.page';
-import user from '../../../../testData/user';
+import user from '../../../../testData/userRoles';
 import ProfilePage from '../../../../pageObjects/profile.page';
 import TopMenuPage from '../../../../pageObjects/topMenu.page';
 import LinksPage from '../../../../pageObjects/settingsLinks.page';

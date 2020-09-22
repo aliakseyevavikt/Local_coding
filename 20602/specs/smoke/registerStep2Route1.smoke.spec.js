@@ -1,11 +1,11 @@
 import HomePage from '../../../pageObjects/home.page';
 import RegisterPage from '../../../pageObjects/register.page';
-import user from '../../data/users';
+import user from '../../../testData/userFake';
 import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
 import expected from '../../data/expected.json';
 import { userDelete } from '../../../helpers/deleteNewUserByAxios';
 import ProfilePage from '../../../pageObjects/profile.page';
-import { getUserByEmail } from '../../helpers/getUserByEmail';
+import { getUserByEmail } from '../../../helpers/getUserByEmail';
 
 before(() => {
   HomePage.open();

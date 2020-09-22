@@ -1,5 +1,5 @@
 import ContactUsPage from '../../../pageObjects/contactUs.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import { newUser } from '../../../20610/data/fakeData';
 import expected from '../../../20610/data/expected.json';
 

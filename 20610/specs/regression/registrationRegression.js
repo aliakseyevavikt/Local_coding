@@ -1,5 +1,5 @@
 import RegisterPage from '../../../pageObjects/register.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import expected from '../../data/expected.json';
 import clearInputValue from '../../../helpers/clearValueMethod';
 

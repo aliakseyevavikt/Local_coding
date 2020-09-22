@@ -1,5 +1,5 @@
 import LoginPage from '../../../pageObjects/login.page';
-import { student } from '../../../testData/user';
+import { student } from '../../../testData/userRoles';
 import DailyReportsPage from '../../../pageObjects/dailyReports.page';
 import { notificationText, textRandom } from '../../data/dailyReportData';
 import ProfilePage from '../../../pageObjects/profile.page';

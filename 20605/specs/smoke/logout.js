@@ -1,6 +1,6 @@
 import LoginPage from '../../../pageObjects/login.page';
 import TopMenuPage from '../../../pageObjects/topMenu.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import waitTime from '../../../testData/waitTimes';
 import {loginPage} from '../../testResult/login';
 
