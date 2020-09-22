@@ -49,12 +49,12 @@
 					"raw": "{\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"firstName\": \"{{$randomFirstName}}\",\r\n    \"lastName\": \"{{$randomLastName}}\",\r\n    \"phone\": \"14155551122\",\r\n    \"about\": \"JavaScript\",\r\n    \"goals\": \"Find the job\",\r\n    \"englishLevel\": \"Intermediate\",\r\n    \"countryName\": \"USA\"\r\n}\r\n"
 				},
 				"url": {
-					"raw": "{{host}}/user",
+					"raw": "{{host}}/userRoles",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user"
+						"userRoles"
 					]
 				}
 			},
@@ -72,7 +72,7 @@
 							"\r",
 							"pm.environment.set(\"newToken\", body.token);\r",
 							"pm.environment.set(\"newUserId\", body.userId);\r",
-							"pm.environment.set(\"newUserName\", body.user.name);\r",
+							"pm.environment.set(\"newUserName\", body.userRoles.name);\r",
 							"\r",
 							"\r",
 							"\r",
@@ -103,12 +103,12 @@
 					"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}\r\n"
 				},
 				"url": {
-					"raw": "{{host}}/user/login",
+					"raw": "{{host}}/userRoles/login",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"login"
 					]
 				}
@@ -164,12 +164,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{host}}/user/{{newUserId}}",
+					"raw": "{{host}}/userRoles/{{newUserId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"{{newUserId}}"
 					]
 				}
@@ -214,12 +214,12 @@
 					"raw": "{\r\n\r\n    \"email\": \"{{email}}\"\r\n\r\n}\r\n\r\n\r\n"
 				},
 				"url": {
-					"raw": "{{host}}/user/password/reset/request",
+					"raw": "{{host}}/userRoles/password/reset/request",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"password",
 						"reset",
 						"request"
@@ -269,12 +269,12 @@
 					"raw": " { \r\n           \r\n    \"email\": \"group20603@pasv4.us\",\r\n    \"password\": \"123456\"\r\n\r\n } \r\n"
 				},
 				"url": {
-					"raw": "{{host}}/user/login",
+					"raw": "{{host}}/userRoles/login",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"login"
 					]
 				}
@@ -329,12 +329,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{host}}/user/hash/{{newUserId}}",
+					"raw": "{{host}}/userRoles/hash/{{newUserId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"hash",
 						"{{newUserId}}"
 					]
@@ -383,12 +383,12 @@
 					"raw": "{\r\n  \"userId\": \"{{newUserId}}\",\r\n  \"hash\": \"{{hash}}\"\r\n}\r\n"
 				},
 				"url": {
-					"raw": "{{host}}/user/password/reset/valid",
+					"raw": "{{host}}/userRoles/password/reset/valid",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"password",
 						"reset",
 						"valid"
@@ -447,12 +447,12 @@
 					"raw": "{\r\n\r\n \"userId\": \"{{newUserId}}\",\r\n \"hash\": \"{{hash}}\",\r\n \"password\": \"{{resetedPassword}}\"\r\n\r\n}"
 				},
 				"url": {
-					"raw": "{{host}}/user/password/reset/new",
+					"raw": "{{host}}/userRoles/password/reset/new",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"password",
 						"reset",
 						"new"
@@ -508,12 +508,12 @@
 					"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{resetedPassword}}\"\r\n}\r\n"
 				},
 				"url": {
-					"raw": "{{host}}/user/login",
+					"raw": "{{host}}/userRoles/login",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"login"
 					]
 				}
@@ -574,12 +574,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{host}}/user",
+					"raw": "{{host}}/userRoles",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user"
+						"userRoles"
 					]
 				}
 			},
@@ -624,12 +624,12 @@
 					"raw": "{\r\n   \"userId\": \"{{newUserId}}\"\r\n\r\n}\r\n"
 				},
 				"url": {
-					"raw": "{{host}}/user/verify/email/send",
+					"raw": "{{host}}/userRoles/verify/email/send",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"verify",
 						"email",
 						"send"
@@ -671,12 +671,12 @@
 					"raw": "{\r\n    \"userId\": \"{{newUserId}}\",\r\n    \"name\": \"{{newUserName}}\",\r\n    \"oldEmail\": \"{{email}}\",\r\n    \"newEmail\": \"newNEW@gmail.com\",\r\n    \"confirmEmail\": \"newNEW@gmail.com\"\r\n}"
 				},
 				"url": {
-					"raw": "{{host}}/user/settings/email",
+					"raw": "{{host}}/userRoles/settings/email",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"settings",
 						"email"
 					]
@@ -733,12 +733,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{host}}/user/{{newUserId}}",
+					"raw": "{{host}}/userRoles/{{newUserId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"{{newUserId}}"
 					]
 				}
