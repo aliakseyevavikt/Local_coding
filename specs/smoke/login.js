@@ -1,45 +1,36 @@
 import LoginPage from '../../pageObjects/login.page';
 import ProfilePage from '../../pageObjects/profile.page';
-import waitTime from '../../testData/waitTimes';
+import TopMenuPage from '../../pageObjects/topMenu.page';
 import user from '../../testData/user';
+import waitTime from '../../testData/waitTimes';
 
+describe('LOGIN FUNCTIONALITY', function() {
 
-describe('New user registration page', () => {
   beforeEach(() => {
     LoginPage.open();
-    console.log(process.env.ADMIN_TOKEN);
   });
-});
 
-describe('LOGIN NEW USER', function () {
-  it('Should Successful login as a new user', () => {
-    LoginPage.validLogin(user.new.email, user.new.password);
-    ProfilePage.badgeRole.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
+  it('Should verify that user can login as NEW USER', function() {
+    LoginPage.login(user.new2.email, user.new2.password);
+    TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
     expect(ProfilePage.getLoginConfirmation()).eq(user.new.firstName + ' ' + user.new.lastName);
   });
-});
 
-describe('LOGIN ADMIN', function () {
-  console.log(process.env);
-  it('Should Successful login as an Admin', () => {
-    LoginPage.validLogin(user.admin.email, user.admin.password);
-    ProfilePage.badgeRole.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
+  it('Should verify that user can login as ADMIN', function() {
+    LoginPage.login(user.admin.email, user.admin.password);
+    TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
     expect(ProfilePage.getLoginConfirmation()).eq(user.admin.firstName + ' ' + user.admin.lastName);
   });
-});
 
-describe('LOGIN LEARNER', function () {
-  it('Should Successfuly login as a learner', () => {
-    LoginPage.validLogin(user.learner.email, user.learner.password);
-    ProfilePage.badgeRole.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
+  it('Should verify that user can login as LEARNER', function() {
+    LoginPage.login(user.learner.email, user.learner.password);
+    TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
     expect(ProfilePage.getLoginConfirmation()).eq(user.learner.firstName + ' ' + user.learner.lastName);
   });
-});
 
-describe('LOGIN NEW STUDENT', function () {
-  it('Should Successful login as a student', () => {
-    LoginPage.validLogin(user.student.email, user.student.password);
-    ProfilePage.badgeRole.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
+  it('Should verify that user can login as STUDENT', function() {
+    LoginPage.login(user.student.email, user.student.password);
+    TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
     expect(ProfilePage.getLoginConfirmation()).eq(user.student.firstName + ' ' + user.student.lastName);
   });
 });
