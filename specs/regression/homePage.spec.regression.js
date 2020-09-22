@@ -7,7 +7,7 @@ describe('HOME PAGE REGRESSION', function() {
   });
 
   it('Logo is displayed', function() {
-    expect(HomePage.homePageLink.isDisplayed());
+    expect(HomePage.homePageLink.isDisplayed()).true;
   });
 
   it('Site name has the correct text', function() {
@@ -15,7 +15,7 @@ describe('HOME PAGE REGRESSION', function() {
   });
 
   it('Header is displayed', function() {
-    expect(HomePage.header.isDisplayed());
+    expect(HomePage.header.isDisplayed()).true;
   });
 
   it('Header has the correct text', function() {
@@ -23,15 +23,15 @@ describe('HOME PAGE REGRESSION', function() {
   });
 
   it('Image is displayed', function() {
-    expect(HomePage.image.isDisplayed());
+    expect(HomePage.image.isDisplayed()).true;
   });
 
   it('Login button is displayed', function() {
-    expect(HomePage.loginBtn.isDisplayed());
+    expect(HomePage.loginBtn.isDisplayed()).true;
   });
 
   it('Register button is displayed', function() {
     HomePage.open();
-    expect(HomePage.registerBtn.isDisplayed());
+    expect(HomePage.registerBtn.isDisplayed()).true;
   });
 });
