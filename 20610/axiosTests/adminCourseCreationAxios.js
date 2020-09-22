@@ -1,5 +1,5 @@
 import axios from 'axios';
-import user from '../../testData/user';
+import user from '../../testData/userRoles';
 const host = 'https://server-stage.pasv.us';
 let adminToken = '';
 import { userLogin } from '../../20610/axiosTests/userLogin';

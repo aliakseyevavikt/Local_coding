@@ -49,12 +49,12 @@
 					"raw": "{\r\n    \"email\": \"admin@qa6.us\",\r\n    \"password\": \"admin\"\r\n}"
 				},
 				"url": {
-					"raw": "{{host}}/user/login",
+					"raw": "{{host}}/userRoles/login",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"login"
 					]
 				}
@@ -110,12 +110,12 @@
 					"raw": "{\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\",\r\n    \"firstName\": \"{{$randomFirstName}}\",\r\n    \"lastName\": \"{{$randomLastName}}\",\r\n    \"phone\": \"17775551122\",\r\n    \"about\": \"QA Engineer\",\r\n    \"goals\": \"no goals\",\r\n    \"englishLevel\": \"Advance\",\r\n    \"countryName\": \"USA\"\r\n}"
 				},
 				"url": {
-					"raw": "{{host}}/user",
+					"raw": "{{host}}/userRoles",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user"
+						"userRoles"
 					]
 				}
 			},
@@ -165,12 +165,12 @@
 					"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}"
 				},
 				"url": {
-					"raw": "{{host}}/user/login",
+					"raw": "{{host}}/userRoles/login",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"login"
 					]
 				}
@@ -222,12 +222,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{host}}/user/{{newUserId}}",
+					"raw": "{{host}}/userRoles/{{newUserId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"{{newUserId}}"
 					]
 				}
@@ -267,17 +267,17 @@
 					}
 				],
 				"url": {
-					"raw": "{{host}}/user/email/{{email}}",
+					"raw": "{{host}}/userRoles/email/{{email}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"email",
 						"{{email}}"
 					]
 				},
-				"description": "Due to this request we can get user by email. (all information about user by email)"
+				"description": "Due to this request we can get userRoles by email. (all information about userRoles by email)"
 			},
 			"response": []
 		},
@@ -325,12 +325,12 @@
 					"raw": "{\r\n    \"email\": \"{{email}}\"\r\n}"
 				},
 				"url": {
-					"raw": "{{host}}/user/password/reset/request",
+					"raw": "{{host}}/userRoles/password/reset/request",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"password",
 						"reset",
 						"request"
@@ -388,12 +388,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{host}}/user/hash/{{newUserId}}",
+					"raw": "{{host}}/userRoles/hash/{{newUserId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"hash",
 						"{{newUserId}}"
 					]
@@ -445,12 +445,12 @@
 					"raw": "{\r\n  \"userId\": \"{{newUserId}}\",\r\n  \"hash\": \"{{hash}}\"\r\n}"
 				},
 				"url": {
-					"raw": "{{host}}/user/password/reset/valid",
+					"raw": "{{host}}/userRoles/password/reset/valid",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"password",
 						"reset",
 						"valid"
@@ -514,12 +514,12 @@
 					"raw": "{\r\n  \"userId\": \"{{newUserId}}\",\r\n  \"hash\": \"{{hash}}\",\r\n  \"password\": \"{{newPassword}}\"\r\n}"
 				},
 				"url": {
-					"raw": "{{host}}/user/password/reset/new",
+					"raw": "{{host}}/userRoles/password/reset/new",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"password",
 						"reset",
 						"new"
@@ -572,12 +572,12 @@
 					"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{newPassword}}\"\r\n}"
 				},
 				"url": {
-					"raw": "{{host}}/user/login",
+					"raw": "{{host}}/userRoles/login",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"login"
 					]
 				}
@@ -630,16 +630,16 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/{{newUserId}}",
+					"raw": "{{host}}/userRoles/{{newUserId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"{{newUserId}}"
 					]
 				},
-				"description": "Due to this request we can delete user by id"
+				"description": "Due to this request we can delete userRoles by id"
 			},
 			"response": []
 		},
@@ -688,12 +688,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{host}}/user/{{userId}}",
+					"raw": "{{host}}/userRoles/{{userId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"{{userId}}"
 					]
 				}
@@ -750,12 +750,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{host}}/user",
+					"raw": "{{host}}/userRoles",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user"
+						"userRoles"
 					]
 				}
 			},

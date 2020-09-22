@@ -1,6 +1,6 @@
 import LoginPage from '../../../pageObjects/login.page';
 import ProfilePage from '../../../pageObjects/profile.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import wait_time_medium from '../../../testData/waitTimes';
 import expected from '../../../20610/data/expected.json';
 

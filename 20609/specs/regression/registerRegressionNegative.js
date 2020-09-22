@@ -3,7 +3,7 @@ import { userNew } from '../../data/registerData';
 import { userNegativeData, invalidFirstNameData } from '../../data/userNegativeData';
 import ResetPasswordPage from '../../../pageObjects/resetPassword.page';
 import { errorMessages } from '../../data/errorMessages';
-import user from '../../.././testData/user';
+import user from '../../../testData/userRoles';
 
 describe('REGISTER USER - NEGATIVE', () => {
   before(() => {

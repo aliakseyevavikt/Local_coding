@@ -1,6 +1,6 @@
 import LoginPage from "../../../pageObjects/login.page";
 import ResetPasswordPage from "../../../pageObjects/resetPassword.page";
-import {student} from "../../../testData/user";
+import {student} from "../../../testData/userRoles";
 
 describe('RESET PASSWORD', () => {
   before( () => {

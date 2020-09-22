@@ -1,6 +1,6 @@
 import TopMenuPage from '../../../pageObjects/topMenu.page';
 import LoginPage from '../../../pageObjects/login.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import HomePage from '../../../pageObjects/home.page';
 import expected from '../../data/expected.json';
 
