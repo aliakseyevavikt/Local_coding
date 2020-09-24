@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Register User [user]",
+			"name": "Register User [userRoles]",
 			"event": [
 				{
 					"listen": "test",
@@ -63,19 +63,19 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user",
+					"raw": "{{host}}/userRoles",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user"
+						"userRoles"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "User Login [user]",
+			"name": "User Login [userRoles]",
 			"event": [
 				{
 					"listen": "test",
@@ -115,12 +115,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/login",
+					"raw": "{{host}}/userRoles/login",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"login"
 					]
 				}
@@ -166,7 +166,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://server-stage.pasv.us/user/login",
+					"raw": "https://server-stage.pasv.us/userRoles/login",
 					"protocol": "https",
 					"host": [
 						"server-stage",
@@ -174,7 +174,7 @@
 						"us"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"login"
 					]
 				}
@@ -222,12 +222,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/impersonate",
+					"raw": "{{host}}/userRoles/impersonate",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"impersonate"
 					]
 				}
@@ -277,12 +277,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/search",
+					"raw": "{{host}}/userRoles/search",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"search"
 					]
 				}
@@ -325,12 +325,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/{{newUserId}}/crm",
+					"raw": "{{host}}/userRoles/{{newUserId}}/crm",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"{{newUserId}}",
 						"crm"
 					]
@@ -388,12 +388,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user",
+					"raw": "{{host}}/userRoles",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user"
+						"userRoles"
 					]
 				}
 			},
@@ -449,12 +449,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user",
+					"raw": "{{host}}/userRoles",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user"
+						"userRoles"
 					]
 				}
 			},
@@ -499,12 +499,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/lightweight",
+					"raw": "{{host}}/userRoles/lightweight",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"lightweight"
 					]
 				}
@@ -550,12 +550,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/roles",
+					"raw": "{{host}}/userRoles/roles",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"roles"
 					]
 				}
@@ -601,12 +601,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/auth",
+					"raw": "{{host}}/userRoles/auth",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"auth"
 					]
 				}
@@ -652,12 +652,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/email/{{email}}",
+					"raw": "{{host}}/userRoles/email/{{email}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"email",
 						"{{email}}"
 					]
@@ -704,12 +704,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/{{newUserId}}",
+					"raw": "{{host}}/userRoles/{{newUserId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"{{newUserId}}"
 					]
 				}
@@ -755,12 +755,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/country",
+					"raw": "{{host}}/userRoles/country",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"country"
 					]
 				}
@@ -806,12 +806,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/fulfilled/all",
+					"raw": "{{host}}/userRoles/fulfilled/all",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"fulfilled",
 						"all"
 					]
@@ -858,12 +858,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/links",
+					"raw": "{{host}}/userRoles/links",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"links"
 					]
 				}
@@ -909,12 +909,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/profile",
+					"raw": "{{host}}/userRoles/profile",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"profile"
 					]
 				}
@@ -960,12 +960,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/shipping",
+					"raw": "{{host}}/userRoles/shipping",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"shipping"
 					]
 				}
@@ -1013,12 +1013,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/stats",
+					"raw": "{{host}}/userRoles/stats",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"stats"
 					]
 				}
@@ -1026,7 +1026,7 @@
 			"response": []
 		},
 		{
-			"name": "User Password Reset Request [user]",
+			"name": "User Password Reset Request [userRoles]",
 			"event": [
 				{
 					"listen": "test",
@@ -1063,12 +1063,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/password/reset/request",
+					"raw": "{{host}}/userRoles/password/reset/request",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"password",
 						"reset",
 						"request"
@@ -1078,7 +1078,7 @@
 			"response": []
 		},
 		{
-			"name": "Get Reset Password Hash [by Admin for user] Copy",
+			"name": "Get Reset Password Hash [by Admin for userRoles] Copy",
 			"event": [
 				{
 					"listen": "test",
@@ -1122,12 +1122,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/hash/{{newUserId}}",
+					"raw": "{{host}}/userRoles/hash/{{newUserId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"hash",
 						"{{newUserId}}"
 					]
@@ -1136,7 +1136,7 @@
 			"response": []
 		},
 		{
-			"name": "User Is Valid Reset Links [user]",
+			"name": "User Is Valid Reset Links [userRoles]",
 			"event": [
 				{
 					"listen": "test",
@@ -1174,12 +1174,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/password/reset/valid",
+					"raw": "{{host}}/userRoles/password/reset/valid",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"password",
 						"reset",
 						"valid"
@@ -1189,7 +1189,7 @@
 			"response": []
 		},
 		{
-			"name": "User Password Reset New [user]",
+			"name": "User Password Reset New [userRoles]",
 			"event": [
 				{
 					"listen": "test",
@@ -1237,12 +1237,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/password/reset/new",
+					"raw": "{{host}}/userRoles/password/reset/new",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"password",
 						"reset",
 						"new"
@@ -1252,7 +1252,7 @@
 			"response": []
 		},
 		{
-			"name": "User Settings Update Email [user]",
+			"name": "User Settings Update Email [userRoles]",
 			"event": [
 				{
 					"listen": "test",
@@ -1304,12 +1304,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/settings/email",
+					"raw": "{{host}}/userRoles/settings/email",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"settings",
 						"email"
 					]
@@ -1360,12 +1360,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/profile",
+					"raw": "{{host}}/userRoles/profile",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"profile"
 					]
 				}
@@ -1415,12 +1415,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/{{newUserId}}",
+					"raw": "{{host}}/userRoles/{{newUserId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"{{newUserId}}"
 					]
 				}
@@ -1470,12 +1470,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/profile",
+					"raw": "{{host}}/userRoles/profile",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"profile"
 					]
 				}
@@ -1483,7 +1483,7 @@
 			"response": []
 		},
 		{
-			"name": "User Settings Update Links Copy [user]",
+			"name": "User Settings Update Links Copy [userRoles]",
 			"event": [
 				{
 					"listen": "test",
@@ -1520,12 +1520,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/links",
+					"raw": "{{host}}/userRoles/links",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"links"
 					]
 				}
@@ -1533,7 +1533,7 @@
 			"response": []
 		},
 		{
-			"name": "User Update Self [user]",
+			"name": "User Update Self [userRoles]",
 			"event": [
 				{
 					"listen": "test",
@@ -1570,19 +1570,19 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user",
+					"raw": "{{host}}/userRoles",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user"
+						"userRoles"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "User Settings Update Password [user]",
+			"name": "User Settings Update Password [userRoles]",
 			"event": [
 				{
 					"listen": "test",
@@ -1624,12 +1624,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/settings/password",
+					"raw": "{{host}}/userRoles/settings/password",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"settings",
 						"password"
 					]
@@ -1638,7 +1638,7 @@
 			"response": []
 		},
 		{
-			"name": "User Settings Update Shipping Address [user]",
+			"name": "User Settings Update Shipping Address [userRoles]",
 			"event": [
 				{
 					"listen": "test",
@@ -1675,12 +1675,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/shipping",
+					"raw": "{{host}}/userRoles/shipping",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"shipping"
 					]
 				}
@@ -1725,12 +1725,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user/{{newUserId}}",
+					"raw": "{{host}}/userRoles/{{newUserId}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user",
+						"userRoles",
 						"{{newUserId}}"
 					]
 				}

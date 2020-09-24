@@ -2,7 +2,7 @@ import DailyReportsPage from '../../../pageObjects/dailyReports.page';
 import { newUser } from '../../../20610/data/fakeData';
 import LoginPage from '../../../pageObjects/login.page';
 import ProfilePage from '../../../pageObjects/profile.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 let res = null;
 import axios from 'axios';
 const host = 'https://server-stage.pasv.us';

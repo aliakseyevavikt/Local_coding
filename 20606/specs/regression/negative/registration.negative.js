@@ -1,5 +1,5 @@
 import RegisterPage from '../../../../pageObjects/register.page'
-import user from '../../../../testData/user';
+import user from '../../../../testData/userRoles';
 import { errorRegMessage } from '../../../testResult/registration.page.expected'
 import waitTime from '../../../../testData/waitTimes';
 

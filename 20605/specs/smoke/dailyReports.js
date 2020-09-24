@@ -1,5 +1,5 @@
 import DailyReportsPage from '../../../pageObjects/dailyReports.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import LoginPage from '../../../pageObjects/login.page';
 import { dailyReport } from '../../testData/dailyReport';
 import { createDailyRep } from '../../helpers/createDailyReport.js';

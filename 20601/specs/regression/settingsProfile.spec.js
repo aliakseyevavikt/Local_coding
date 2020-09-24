@@ -1,6 +1,6 @@
 import loginPage from '../../../pageObjects/login.page';
 import settingsProfile from '../../../pageObjects/settingsProfile.page';
-import userDate from '../../../testData/user';
+import userDate from '../../../testData/userRoles';
 import expectedDate from '../../data/expected.json';
 import fakerData from '../../data/fakerData'
 

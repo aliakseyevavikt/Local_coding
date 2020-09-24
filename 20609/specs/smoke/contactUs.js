@@ -1,5 +1,5 @@
 import ContactUsPage from '../../../pageObjects/contactUs.page';
-import user from '../../../testData/user';
+import user from '../../../testData/userRoles';
 import { textMessageInput, textYourRequest } from '../../data/contactUsData';
 
 describe('CONTACT US PAGE - SMOKE', () => {
