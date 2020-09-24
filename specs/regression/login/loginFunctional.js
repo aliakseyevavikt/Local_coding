@@ -1,6 +1,6 @@
 import LoginPage from '../../../pageObjects/login.page';
 import user from '../../../testData/userRoles';
-import {anyNumbers, anySymbols, upperLowerLetters} from "../../../testData/login";
+import { anyNumbers, anySymbols, upperLowerLetters } from '../../../testData/login.testData';
 
 describe('LOGIN PAGE (FUNCTIONAL)', function () {
   before(() => {
