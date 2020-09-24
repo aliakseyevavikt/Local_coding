@@ -1,6 +1,6 @@
 import FooterPage from '../../pageObjects/footer.page';
 import ContactUsPage from '../../pageObjects/contactUs.page';
-import { contactUs } from '../../testResult/contactUs.testResult';
+import { contactUsTestResult } from '../../testResult/contactUs.testResult';
 
 describe('FOOTER SMOKE', function() {
   before(() => {
@@ -9,6 +9,6 @@ describe('FOOTER SMOKE', function() {
 
   it('Redirect to "contact us" page is correct', function() {
     FooterPage.contactUs.click();
-    expect(ContactUsPage.headerContactUs.getText()).eq(contactUs.header);
+    expect(ContactUsPage.headerContactUs.getText()).eq(contactUsTestResult.header);
   });
 });

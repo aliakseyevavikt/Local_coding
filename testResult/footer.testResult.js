@@ -1,8 +1,8 @@
-const FooterItems = {
+const FooterTestResult = {
   footerText: 'If you have any questions or concerns, please contact us.\nTerms of Service Privacy Policy',
-  contactUs: 'Contact us',
-  termsOfService: 'Terms of Service',
-  privacyPolicy: 'Privacy Policy',
+  contactUsText: 'Contact us',
+  termsOfServiceText: 'Terms of Service',
+  privacyPolicyText: 'Privacy Policy',
 };
 
-export { FooterItems };
+export { FooterTestResult };

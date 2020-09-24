@@ -1,43 +1,50 @@
 import FooterPage from '../../pageObjects/footer.page';
-import ContactUsPage from '../../pageObjects/contactUs.page';
-import TermsOfServicePage from '../../../pageObjects/termsOfService.page';
-import PrivacyPolicyPage from '../../../pageObjects/privacyPolicy.page';
-import { FooterItems } from '../../testResult/footer';
-import { contactUs } from '../../testResult/contactUs';
-import { termsOfService } from '../../testResult/termsOfService';
-import { privacyPolicy } from '../../testResult/privacyPolicy';
+import TermsOfServicePage from '../../pageObjects/termsOfService.page';
+import PrivacyPolicyPage from '../../pageObjects/privacyPolicy.page';
+import { FooterTestResult } from '../../testResult/footer.testResult';
+import { termsOfServiceTestResult } from '../../testResult/termsOfService.testResult';
+import { privacyPolicyTestResult } from '../../testResult/privacyPolicy.testResult';
 
-describe('FOOTER ELEMENTS', function() {
+describe('FOOTER REGRESSION', function() {
   before(() => {
     FooterPage.open();
   });
   it('Footer is displayed', function() {
-    expect(FooterPage.footer.isDisplayed()).eq(true);
+    expect(FooterPage.footer.isDisplayed()).true;
   });
 
   it('Footer should have correct text', function() {
-    expect(FooterPage.footer.getText()).eq(FooterItems.footerText);
+    expect(FooterPage.footer.getText()).eq(FooterTestResult.footerText);
   });
 
-  it('Footer link "contact us" is clickable', function() {
-    expect(FooterPage.contactUs.isClickable()).eq(true);
+  it('Footer link "contact us" is displayed', function() {
+    expect(FooterPage.contactUs.isDisplayed()).true;
   });
 
-  it('Footer link "Terms of Service" is clickable', function() {
-    expect(FooterPage.termsOfService.isClickable()).eq(true);
+  it('Footer link "contact us" has correct text', function() {
+    expect(FooterPage.contactUs.getText().eq(FooterTestResult.contactUsText));
   });
 
-  it('Footer link "Privacy Policy" is clickable', function() {
-    expect(FooterPage.privacyPolicy.isClickable()).eq(true);
+  it('Footer link "Terms of Service" is displayed', function() {
+    expect(FooterPage.termsOfService.isDisplayed()).true;
+  });
+
+  it('Footer link "Terms of Service" is displayed', function() {
+    expect(FooterPage.termsOfService.getText()).eq(FooterTestResult.termsOfServiceText);
+  });
+
+  it('Footer link "Privacy Policy" is displayed', function() {
+    expect(FooterPage.privacyPolicy.isDisplayed()).true;
   });
 
   it('Redirect to "Terms of service" page is correct', function() {
-    FooterPage.navToTermsOfService();
-    expect(TermsOfServicePage.headerTermsOfService.getText()).eq(termsOfService.header);
+    FooterPage.termsOfService.click();
+    expect(TermsOfServicePage.headerTermsOfService.getText()).eq(termsOfServiceTestResult.header);
   });
 
   it('Redirect to "Privacy Policy" page is correct', function() {
-    FooterPage.navToPrivacyPolicy();
-    expect(PrivacyPolicyPage.headerPrivacyPolicy.getText()).eq(privacyPolicy.header);
+    FooterPage.open();
+    FooterPage.privacyPolicy.click();
+    expect(PrivacyPolicyPage.headerPrivacyPolicy.getText()).eq(privacyPolicyTestResult.header);
   });
 });

@@ -1,4 +1,4 @@
-const contactUs = {
+const contactUsTestResult = {
   header: 'Contact us',
 };
-export { contactUs };
+export { contactUsTestResult };
