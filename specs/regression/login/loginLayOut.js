@@ -1,5 +1,5 @@
 import LoginPage from '../../../pageObjects/login.page';
-import { loginPage } from '../../../testResult/login';
+import { loginPageTestResult } from '../../../testResult/loginPage.testResult';
 
 describe('LOGIN PAGE', function () {
   before(() => {
@@ -12,7 +12,7 @@ describe('LOGIN PAGE', function () {
     });
 
     it('Header should have correct text', function () {
-      expect(LoginPage.headerLogin.getText()).eq(loginPage.header);
+      expect(LoginPage.headerLogin.getText()).eq(loginPageTestResult.header);
     });
   });
 
@@ -26,7 +26,7 @@ describe('LOGIN PAGE', function () {
     });
 
     it('Should verify that "Email" input field has placeholder "Email"', function () {
-      expect(LoginPage.inputUsername.getAttribute('placeholder')).eq(loginPage.emailPlaceholder);
+      expect(LoginPage.inputUsername.getAttribute('placeholder')).eq(loginPageTestResult.emailPlaceholder);
     });
 
     it('Should verify that "Lock" icon is displayed', function () {
@@ -38,7 +38,7 @@ describe('LOGIN PAGE', function () {
     });
 
     it('Should verify that "Password" input field has placeholder "Email"', function () {
-      expect(LoginPage.inputPassword.getAttribute('placeholder')).eq(loginPage.passwordPlaceholder);
+      expect(LoginPage.inputPassword.getAttribute('placeholder')).eq(loginPageTestResult.passwordPlaceholder);
     });
 
     it('Should verify that "Log in" button is displayed', function () {
