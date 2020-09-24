@@ -1,4 +1,4 @@
 const privacyPolicyTestResult = {
-  header: 'PASV Privacy Policy',
+  header: 'LOCALCODING Privacy Policy',
 };
 export { privacyPolicyTestResult };

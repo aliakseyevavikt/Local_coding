@@ -22,7 +22,7 @@ describe('FOOTER REGRESSION', function() {
   });
 
   it('Footer link "contact us" has correct text', function() {
-    expect(FooterPage.contactUs.getText().eq(FooterTestResult.contactUsText));
+    expect(FooterPage.contactUs.getText()).eq(FooterTestResult.contactUsText);
   });
 
   it('Footer link "Terms of Service" is displayed', function() {
