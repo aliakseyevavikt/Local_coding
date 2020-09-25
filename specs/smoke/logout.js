@@ -9,7 +9,7 @@ describe('LOGOUT FUNCTIONALITY SMOKE', function() {
     LoginPage.open();
   });
 
-  it('TC-052 should verify that NEW USER can logout to Login Page', function() {
+  it('NEW USER can logout', function() {
     LoginPage.login(user.new.email, user.new.password);
     TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_LONG });
     TopMenuPage.dropDownArrow.click();
@@ -18,7 +18,7 @@ describe('LOGOUT FUNCTIONALITY SMOKE', function() {
     expect((LoginPage.headerLogin).getText()).eq(loginPageTestResult.header);
   });
 
-  it('TC-051 should verify that ADMIN can logout to Login Page', function() {
+  it('ADMIN can logout', function() {
     LoginPage.login(user.admin.email, user.admin.password);
     TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_LONG });
     TopMenuPage.dropDownArrow.click();
@@ -27,7 +27,7 @@ describe('LOGOUT FUNCTIONALITY SMOKE', function() {
     expect((LoginPage.headerLogin).getText()).eq(loginPageTestResult.header);
   });
 
-  it('TC-053 should verify that LEARNER can logout to Login Page', function() {
+  it('LEARNER can logout', function() {
     LoginPage.login(user.learner.email, user.learner.password);
     TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_LONG });
     TopMenuPage.dropDownArrow.click();
@@ -36,7 +36,7 @@ describe('LOGOUT FUNCTIONALITY SMOKE', function() {
     expect((LoginPage.headerLogin).getText()).eq(loginPageTestResult.header);
   });
 
-  it('TC-054 should verify that STUDENT can logout to Login Page', function() {
+  it('STUDENT can logout', function() {
     LoginPage.login(user.student.email, user.student.password);
     TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_LONG });
     TopMenuPage.dropDownArrow.click();
