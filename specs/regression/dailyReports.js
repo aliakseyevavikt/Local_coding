@@ -35,18 +35,18 @@
 // //     LoginPage.login(user.student.email, user.student.password);
 // //   });
 // //
-// //   it('TC-315 daily report can be created by student', function() {
+// //   it('daily report can be created by student', function() {
 // //     let dailyReportsQty = +DailyReportsPage.reportQty.getText();
 // //     createDailyRep(dailyReportTestData.moraleSelectorIndex, dailyReportTestData.hoursSelectorIndex, dailyReportTestData.dailyReportText);
 // //     expect(+DailyReportsPage.reportQty.getText()).eq(dailyReportsQty + 1);
 // //   });
 // //
-// //   it('TC-316 created daily report contains selected by student checkbox "I need help"', function() {
+// //   it('created daily report contains selected by student checkbox "I need help"', function() {
 // //     // browser.waitUntil(() => DailyReportsPage.dailyReportTag[0].isDisplayed());
 // //     expect(DailyReportsPage.dailyReportTag[0].getText()).eq(dailyReportTestData.tagText);
 // //   });
 // //
-// //   it('TC-317 created daily report contains text created by student', function() {
+// //   it('created daily report contains text created by student', function() {
 // //     expect(DailyReportsPage.newDailyReportCreatedText.getText()).eq(dailyReportTestData.dailyReportText);
 // //   });
 // // });
