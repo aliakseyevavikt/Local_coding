@@ -3,7 +3,7 @@ import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
 import expected from '../../../20610/data/expected.json';
 import { newUser } from '../../data/fakeData';
 import ProfilePage from '../../../pageObjects/profile.page';
-import { userDelete } from '../../../helpers/deleteNewUserByAxios';
+import { userDelete } from '../../../helpers/axios/deleteNewUserByAxios';
 
 before( 'Should register new user',() => {
   RegisterPage.open();

@@ -1,6 +1,6 @@
 const axios = require('axios');
 import RegisterPage from '../../../pageObjects/register.page';
-import { userGetByEmail, loginNewUser } from '../../../helpers/apiFunctions';
+import { userGetByEmail, loginNewUser } from '../../../helpers/axios/apiFunctions';
 const host = 'https://server-stage.pasv.us';
 import user from '../../data/fakerData';
 
