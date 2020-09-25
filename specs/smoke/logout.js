@@ -1,10 +1,10 @@
-import LoginPage from '../../../pageObjects/login.page';
-import TopMenuPage from '../../../pageObjects/topMenu.page';
-import user from '../../../testData/userRoles';
-import waitTime from '../../../testData/waitTimes';
-import {loginPage} from '../../testResult/login';
+import LoginPage from '../../pageObjects/login.page';
+import TopMenuPage from '../../pageObjects/topMenu.page';
+import user from '../../testData/userRoles';
+import waitTime from '../../testData/waitTimes';
+import { loginPageTestResult } from '../../testResult/loginPage.testResult';
 
-describe('LOGOUT FUNCTIONALITY', function() {
+describe('LOGOUT FUNCTIONALITY SMOKE', function() {
   before(() => {
     LoginPage.open();
   });
@@ -15,7 +15,7 @@ describe('LOGOUT FUNCTIONALITY', function() {
     TopMenuPage.dropDownArrow.click();
     TopMenuPage.dropDownMenuLogOut.click();
     LoginPage.inputUsername.waitForDisplayed({ timeout: waitTime.WAIT_TIME_LONG });
-    expect((LoginPage.headerLogin).getText()).eq(loginPage.header);
+    expect((LoginPage.headerLogin).getText()).eq(loginPageTestResult.header);
   });
 
   it('TC-051 should verify that ADMIN can logout to Login Page', function() {
@@ -24,7 +24,7 @@ describe('LOGOUT FUNCTIONALITY', function() {
     TopMenuPage.dropDownArrow.click();
     TopMenuPage.dropDownMenuLogOut.click();
     LoginPage.inputUsername.waitForDisplayed({ timeout: waitTime.WAIT_TIME_LONG });
-    expect((LoginPage.headerLogin).getText()).eq(loginPage.header);
+    expect((LoginPage.headerLogin).getText()).eq(loginPageTestResult.header);
   });
 
   it('TC-053 should verify that LEARNER can logout to Login Page', function() {
@@ -33,7 +33,7 @@ describe('LOGOUT FUNCTIONALITY', function() {
     TopMenuPage.dropDownArrow.click();
     TopMenuPage.dropDownMenuLogOut.click();
     LoginPage.inputUsername.waitForDisplayed({ timeout: waitTime.WAIT_TIME_LONG });
-    expect((LoginPage.headerLogin).getText()).eq(loginPage.header);
+    expect((LoginPage.headerLogin).getText()).eq(loginPageTestResult.header);
   });
 
   it('TC-054 should verify that STUDENT can logout to Login Page', function() {
@@ -42,6 +42,6 @@ describe('LOGOUT FUNCTIONALITY', function() {
     TopMenuPage.dropDownArrow.click();
     TopMenuPage.dropDownMenuLogOut.click();
     LoginPage.inputUsername.waitForDisplayed({ timeout: waitTime.WAIT_TIME_LONG });
-    expect((LoginPage.headerLogin).getText()).eq(loginPage.header);
+    expect((LoginPage.headerLogin).getText()).eq(loginPageTestResult.header);
   });
 });

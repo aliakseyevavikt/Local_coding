@@ -25,13 +25,13 @@ describe('TOP MENU', () => {
     it('TC-09-003 click on Logo/label go to main page', function () {
       browser.waitUntil(() => TopMenuPage.logo.isClickable());
       TopMenuPage.homePageLink.click();
-      expect(TopMenuPage.headerUniversal.getText()).eq(Expected.MainPageHeader);
+      expect(TopMenuPage.header.getText()).eq(Expected.MainPageHeader);
     });
 
     it('TC-09-004 click on Logo/label go to main page', function () {
       browser.waitUntil(() => TopMenuPage.homePageLink.isClickable());
       TopMenuPage.homePageLink.click();
-      expect(TopMenuPage.headerUniversal.getText()).eq(Expected.MainPageHeader);
+      expect(TopMenuPage.header.getText()).eq(Expected.MainPageHeader);
     });
   });
 });

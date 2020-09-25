@@ -56,37 +56,37 @@ describe('TOP MENU ELEMENTS ARE DISPLAYED AND CLICKABLE FOR ADMIN ROLE', () => {
     });
 
     it('should Orders Page Link is displayed', function () {
-        expect(TopMenuPage.adminOrderLink.isDisplayed()).true;
+        expect(TopMenuPage.orderLink.isDisplayed()).true;
     });
 
     it('should Courses Page Link is clickable and redirect to the Courses Page', function () {
         expect(TopMenuPage.coursesLink.isClickable()).true;
         TopMenuPage.coursesLink.click();
-        expect(TopMenuPage.headerUniversal.getText()).equal(topMenuDashboard.coursesLink);
+        expect(TopMenuPage.header.getText()).equal(topMenuDashboard.coursesLink);
     });
 
     it('should Cards Page Link is clickable and redirect to the Cards Page', function () {
         expect(TopMenuPage.cardsLink.isClickable()).true;
         TopMenuPage.cardsLink.click();
-        expect(TopMenuPage.headerUniversal.getText()).equal(topMenuDashboard.cardsLink);
+        expect(TopMenuPage.header.getText()).equal(topMenuDashboard.cardsLink);
     });
 
     it('should Diary Page Link is clickable and redirect to the Diary Page', function () {
         expect(TopMenuPage.diaryLink.isClickable()).true;
         TopMenuPage.diaryLink.click();
-        expect(TopMenuPage.headerUniversal.getText()).equal(topMenuDashboard.diaryLink);
+        expect(TopMenuPage.header.getText()).equal(topMenuDashboard.diaryLink);
     });
 
     it('should Groups Page Link is clickable and redirect to the Groups Page', function () {
         expect(TopMenuPage.groupsLink.isClickable()).true;
         TopMenuPage.groupsLink.click();
-        expect(TopMenuPage.headerUniversal.getText()).equal(topMenuDashboard.groupsLink);
+        expect(TopMenuPage.header.getText()).equal(topMenuDashboard.groupsLink);
     });
 
     it('should Users Page Link is clickable and redirect to the Users Page', function () {
         expect(TopMenuPage.usersLink.isClickable()).true;
         TopMenuPage.usersLink.click();
-        expect(TopMenuPage.headerUniversal.getText()).equal(topMenuDashboard.usersLink);
+        expect(TopMenuPage.header.getText()).equal(topMenuDashboard.usersLink);
     });
 
     it('should Challenges Page Link is clickable and redirect to the Challenges Page', function () {
@@ -98,28 +98,28 @@ describe('TOP MENU ELEMENTS ARE DISPLAYED AND CLICKABLE FOR ADMIN ROLE', () => {
     it('should Telephony Page Link is clickable and redirect to the Telephony Page', function () {
         expect(TopMenuPage.telephonyLink.isClickable()).true;
         TopMenuPage.telephonyLink.click();
-        expect(TopMenuPage.headerUniversal.getText()).equal(topMenuDashboard.telephonyLink);
+        expect(TopMenuPage.header.getText()).equal(topMenuDashboard.telephonyLink);
     });
 
     it('should Shop Page Link is clickable and redirect to the Shop Page', function () {
         expect(TopMenuPage.shopLink.isClickable()).true;
         TopMenuPage.shopLink.click();
-        expect(TopMenuPage.headerUniversal.getText()).equal(topMenuDashboard.shopLink);
+        expect(TopMenuPage.header.getText()).equal(topMenuDashboard.shopLink);
     });
 
     it('should Orders Page Link is clickable and redirect to the Orders Page', function () {
-        expect(TopMenuPage.adminOrderLink.isClickable()).true;
-        TopMenuPage.adminOrderLink.click();
-        expect(TopMenuPage.headerUniversal.getText()).equal(topMenuDashboard.ordersLink);
+        expect(TopMenuPage.orderLink.isClickable()).true;
+        TopMenuPage.orderLink.click();
+        expect(TopMenuPage.header.getText()).equal(topMenuDashboard.ordersLink);
     });
 
     it('should Coins link (coin image) redirect user to the Achievements Page', function () {
         TopMenuPage.coinImg.click();
-        expect(TopMenuPage.headerUniversal.getText()).equal(topMenuDashboard.achievements);
+        expect(TopMenuPage.header.getText()).equal(topMenuDashboard.achievements);
     });
 
     it('should Coins link (coin quantity) redirect user to the Achievements Page', function () {
         TopMenuPage.achievementsLink.click();
-        expect(TopMenuPage.headerUniversal.getText()).equal(topMenuDashboard.achievements);
+        expect(TopMenuPage.header.getText()).equal(topMenuDashboard.achievements);
     });
 });
