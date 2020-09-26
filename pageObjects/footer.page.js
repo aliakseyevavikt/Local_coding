@@ -2,31 +2,19 @@ import BasePage from './../pageObjects/Base.page';
 
 class FooterPage extends BasePage {
   get footer() {
-    return $('[class="mt-auto mb-15rem"]');
+    return $('[data-qa="footer"]');
   }
 
   get contactUs() {
-    return $('//footer/a[@href="/contact"]');
+    return $('[data-qa="footerContactUs"]');
   }
 
   get termsOfService() {
-    return $('//footer/a[@href="/terms"]');
+    return $('[data-qa="footerTerms"]');
   }
 
   get privacyPolicy() {
-    return $('//footer/a[@href="/privacy"]');
-  }
-
-  navToContactUs() {
-    this.contactUs.click();
-  }
-
-  navToTermsOfService() {
-    this.termsOfService.click();
-  }
-
-  navToPrivacyPolicy() {
-    this.privacyPolicy.click();
+    return $('[data-qa="footerPrivacy"]');
   }
 
   open(path) {

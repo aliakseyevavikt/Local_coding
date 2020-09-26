@@ -5,18 +5,6 @@ class ContactUsPage extends BasePage {
     return $('h1');
   }
 
-  get homePgLink() {
-    return $('.site-name');
-  }
-
-  get loginLink() {
-    return $('[href="/user/login"]');
-  }
-
-  get registerLink() {
-    return $('[href="/user/register"]');
-  }
-
   get nameInputFld() {
     return $('#normal_login_name');
   }
@@ -41,18 +29,6 @@ class ContactUsPage extends BasePage {
     return $('.ant-btn.ml-2');
   }
 
-  get contactUsLink() {
-    return $('[href="/contact"]');
-  }
-
-  get termsLink() {
-    return $('[href="/terms"]');
-  }
-
-  get privacyLink() {
-    return $('[href="/privacy"]');
-  }
-
   get nameRequiredTxt() {
     return $$('.ant-form-item-explain')[0];
   }
@@ -63,10 +39,6 @@ class ContactUsPage extends BasePage {
 
   get phoneRequiredTxt() {
     return $$('.ant-form-item-explain')[2];
-  }
-
-  get h1TermPolicy() {
-    return $('h1');
   }
 
   get paragraphText() {

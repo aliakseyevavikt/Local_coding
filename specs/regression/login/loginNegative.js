@@ -1,8 +1,8 @@
 import LoginPage from '../../../pageObjects/login.page';
-import { invalidUserCredentials } from '../../../testData/login';
+import { invalidUserCredentials } from '../../../testData/login.testData';
 import waitTime from '../../../testData/waitTimes';
 import user from '../../../testData/userRoles';
-import { emptyField } from '../../../testData/login';
+import { emptyField } from '../../../testData/login.testData';
 
 describe('LOGIN PAGE (NEGATIVE SCENARIOS)', function() {
   beforeEach(() => {
