@@ -3,7 +3,7 @@ import RegisterPage from '../../../pageObjects/register.page';
 import user from '../../../testData/userFake';
 import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
 import expected from '../../data/expected.json';
-import { userDelete } from '../../../helpers/deleteNewUserByAxios';
+import { userDelete } from '../../../helpers/axios/deleteNewUserByAxios';
 import waitTime from '../../../testData/waitTimes';
 
 before(() => {
