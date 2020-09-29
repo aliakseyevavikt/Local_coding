@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { userDelete } from '../../helpers/deleteNewUserByAxios';
+import { userDelete } from '../../helpers/axios/deleteNewUserByAxios';
 let host = 'https://server-stage.pasv.us';
 let tokenAdmin = '';
 let idAdmin = '';

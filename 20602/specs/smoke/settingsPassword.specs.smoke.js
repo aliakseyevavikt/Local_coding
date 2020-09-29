@@ -4,9 +4,9 @@ import RegisterStep2 from '../../../pageObjects/registerStep2.page';
 import ProfilePage from '../../../pageObjects/profile.page';
 import SettingsPasswordPage from '../../../pageObjects/settingsPassword.page';
 import LoginPage from '../../../pageObjects/login.page';
-import { userDelete } from '../../../helpers/deleteNewUserByAxios';
+import { userDelete } from '../../../helpers/axios/deleteNewUserByAxios';
 import expected from '../../data/expected.json';
-import { userUpdateRole } from '../../../helpers/updateUserRoleByAxios';
+import { userUpdateRole } from '../../../helpers/axios/updateUserRoleByAxios';
 import { roles, admin } from '../../../testData/settingsPasswordData';
 
 describe('NEW USER CHANGE PASSWORD', function () {

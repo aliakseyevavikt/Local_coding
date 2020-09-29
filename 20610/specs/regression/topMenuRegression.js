@@ -60,27 +60,27 @@ describe('TOP MENU LINKS/BUTTONS ARE DISPLAYED', () => {
 describe('TOP MENU LINKS/BUTTONS ARE CLICKABLE', () => {
   it('Courses link redirect user to the Courses Dashboard', () => {
     TopMenuPage.coursesLink.click();
-    expect(TopMenuPage.headerUniversal.getText()).eq(expected.topMenuDashboards.courses);
+    expect(TopMenuPage.header.getText()).eq(expected.topMenuDashboards.courses);
   });
 
   it('Cards link redirect user to the Cards Dashboard', () => {
     TopMenuPage.cardsLink.click();
-    expect(TopMenuPage.headerUniversal.getText()).eq(expected.topMenuDashboards.cards);
+    expect(TopMenuPage.header.getText()).eq(expected.topMenuDashboards.cards);
   });
 
   it('Diary link redirect user to the Diary Dashboard', () => {
     TopMenuPage.diaryLink.click();
-    expect(TopMenuPage.headerUniversal.getText()).eq(expected.topMenuDashboards.diary);
+    expect(TopMenuPage.header.getText()).eq(expected.topMenuDashboards.diary);
   });
 
   it('Groups link redirect user to the Groups Dashboard', () => {
     TopMenuPage.groupsLink.click();
-    expect(TopMenuPage.headerUniversal.getText()).eq(expected.topMenuDashboards.groups);
+    expect(TopMenuPage.header.getText()).eq(expected.topMenuDashboards.groups);
   });
 
   it('Users link redirect user to the Users Dashboard', () => {
     TopMenuPage.usersLink.click();
-    expect(TopMenuPage.headerUniversal.getText()).eq(expected.topMenuDashboards.users);
+    expect(TopMenuPage.header.getText()).eq(expected.topMenuDashboards.users);
   });
 
   it('Challenges link redirect user to the Challenges Dashboard', () => {
@@ -90,27 +90,27 @@ describe('TOP MENU LINKS/BUTTONS ARE CLICKABLE', () => {
 
   it('Telephony link redirect user to the Telephony Dashboard', () => {
     TopMenuPage.telephonyLink.click();
-    expect(TopMenuPage.headerUniversal.getText()).eq(expected.topMenuDashboards.telephony);
+    expect(TopMenuPage.header.getText()).eq(expected.topMenuDashboards.telephony);
   });
 
   it('Shop link redirect user to the Shop Dashboard', () => {
     TopMenuPage.shopLink.click();
-    expect(TopMenuPage.headerUniversal.getText()).eq(expected.topMenuDashboards.shop);
+    expect(TopMenuPage.header.getText()).eq(expected.topMenuDashboards.shop);
   });
 
   it('Orders link redirect user to the Orders Dashboard', () => {
-    TopMenuPage.adminOrderLink.click();
-    expect(TopMenuPage.headerUniversal.getText()).eq(expected.topMenuDashboards.orders);
+    TopMenuPage.orderLink.click();
+    expect(TopMenuPage.header.getText()).eq(expected.topMenuDashboards.orders);
   });
 });
 describe('COINS and ACHIEVEMENTS ', () => {
   it('Coins link (coin image) redirect user to the Achievements Page', () => {
     TopMenuPage.coinImg.click();
-    expect(TopMenuPage.headerUniversal.getText()).eq(expected.topMenuDashboards.achievements);
+    expect(TopMenuPage.header.getText()).eq(expected.topMenuDashboards.achievements);
   });
 
   it('Coins link (coin quantity) redirect user to the Achievements Page', () => {
     TopMenuPage.achievementsLink.click();
-    expect(TopMenuPage.headerUniversal.getText()).eq(expected.topMenuDashboards.achievements);
+    expect(TopMenuPage.header.getText()).eq(expected.topMenuDashboards.achievements);
   });
 });

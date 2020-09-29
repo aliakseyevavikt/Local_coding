@@ -1,5 +1,5 @@
 import BasePage from './Base.page';
-import randomData from '../20601/data/daily.data';
+import { dailyReportTestData } from '../testData/dailyReport.testData';
 
 class DailyReportsPage extends BasePage {
   get createDayReportBtn() {
@@ -10,28 +10,12 @@ class DailyReportsPage extends BasePage {
     return $$('.ant-checkbox-input');
   }
 
-  get iUnderstoodEverythingCheckbox() {
-    return $('[value="understood_everything"]');
-  }
-
-  get helpedClassMatesCheckbox() {
-    return $('[value="help_classmates"]');
-  }
-
-  get watchedLecturesCheckbox() {
-    return $('[value="watch_lessons"]');
-  }
-
   get inputMoral() {
     return $('#morale');
   }
 
   get selectContentMoraleAndHours() {
     return $$('.ant-select-item.ant-select-item-option'); //one selector for both fields
-  }
-
-  get selectedContentMoraleAndHours() {
-    return $$('.ant-select-selection-item');
   }
 
   get inputHours() {
@@ -58,8 +42,8 @@ class DailyReportsPage extends BasePage {
     return $('.small.ml-2');
   }
 
-  get newDailyReportCreatedText () {
-    return $('.ant-row.mb-4')
+  get newDailyReportCreatedText() {
+    return $('.ant-row.mb-4');
   }
 
   get dailyReportTag() {
@@ -70,15 +54,19 @@ class DailyReportsPage extends BasePage {
     return $('.ant-notification-topRight');
   }
 
-  createRandomDayReport() {
+  createDailyReport(moraleLevel, hoursNumber, reportText) {
     this.createDayReportBtn.click();
-    this.checkbox[randomData.checkbox].click(); // click on random checkboxes
+    browser.waitUntil(() => this.checkbox[0].isExisting());
+    this.checkbox.map(el => el.click());
     this.inputMoral.click();
-    this.selectContentMoraleAndHours[randomData.moraleSelectorIndex].click(); // click on random morale
+    this.selectContentMoraleAndHours[moraleLevel].scrollIntoView();
+    this.selectContentMoraleAndHours[moraleLevel].click();
     this.inputHours.click();
-    this.selectContentMoraleAndHours[randomData.hoursSelectorIndex].click(); // click on random hours
-    this.howWasYourDayInput.setValue(randomData.text); // creating  random  text for daily report
+    this.selectContentMoraleAndHours[hoursNumber].scrollIntoView();
+    this.selectContentMoraleAndHours[hoursNumber].click();
+    this.howWasYourDayInput.setValue(reportText);
     this.submitBtn.click();
+    browser.waitUntil(() => this.notificationMessage.getText() === dailyReportTestData.notificationMessageText);
   }
 }
 export default new DailyReportsPage();

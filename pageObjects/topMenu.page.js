@@ -1,6 +1,10 @@
 import BasePage from './Base.page';
 
 class TopMenuPage extends BasePage {
+  get header() {
+    return $('h1');
+  }
+
   get logo() {
     return $$('img')[0];
   }
@@ -45,15 +49,7 @@ class TopMenuPage extends BasePage {
     return $('[href="/shop"]');
   }
 
-  get adminOrderLink() {
-    return $('[href="/admin-order"]');
-  }
-
-  get shopLink() {
-    return $('[href="/shop"]');
-  }
-
-  get ordersLink() {
+  get orderLink() {
     return $('[href="/admin-order"]');
   }
 
@@ -93,20 +89,8 @@ class TopMenuPage extends BasePage {
     return $('[data-qa="logout"]');
   }
 
-  get loginLink() {
-    return $('[href="/user/login"]');
-  }
-
-  get registerLink() {
-    return $('[href="/user/register"]');
-  }
-
   get headerChallenge() {
     return $('.h4.mr-4');
-  }
-
-  get headerUniversal() {
-    return $('h1');
   }
 }
 
