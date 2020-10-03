@@ -4,7 +4,7 @@ import LoginPage from '../../pageObjects/login.page';
 import { loginPageTestResult } from '../../testResult/loginPage.testResult';
 import { registerPageTestResult } from '../../testResult/registerPage.testResult';
 
-describe('HOME PAGE SMOKE', function() {
+describe('[SMOKE] HOME PAGE', function() {
   beforeEach(() => {
     HomePage.open();
   });

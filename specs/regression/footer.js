@@ -5,7 +5,7 @@ import { FooterTestResult } from '../../testResult/footer.testResult';
 import { termsOfServiceTestResult } from '../../testResult/termsOfService.testResult';
 import { privacyPolicyTestResult } from '../../testResult/privacyPolicy.testResult';
 
-describe('FOOTER REGRESSION', function() {
+describe('[REGRESSION] FOOTER', function() {
   before(() => {
     FooterPage.open();
   });

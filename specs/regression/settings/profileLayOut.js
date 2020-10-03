@@ -124,7 +124,7 @@ describe('PROFILE (SETTINGS) LAYOUT', function() {
 });
 
 for (let property in user) {
-    describe(`LAYOUT VALUE ARE CORRECT FOR ${user[property].password} `, () => {
+    describe(`[REGRESSION] LAYOUT VALUE ARE CORRECT FOR ${user[property].password} `, () => {
         before(() => {
             LoginPage.open();
             LoginPage.login(user[property].email, user[property].password);
@@ -143,19 +143,19 @@ for (let property in user) {
             expect(SettingsProfilePage.phoneIF.getValue()).eq(user[property].phone);
         });
         it('About is correct', function() {
-            expect(SettingsProfilePage.aboutFieldRIF.getValue()).eq(user[property].about);  //??????????????????
+            expect(SettingsProfilePage.aboutFieldRIF.getValue()).eq(user[property].about);
         });
         it('My goals is correct', function() {
             expect(SettingsProfilePage.myGoalsRIF.getValue()).eq(user[property].goals);
         });
         it('Country is correct', function() {
-            expect(SettingsProfilePage.countryFieldDDL.getText()).eq(user[property].country); //??????????????
+            expect(SettingsProfilePage.countryFieldDDL.getText()).eq(user[property].country);
         });
         it('English Level is correct', function() {
             expect(SettingsProfilePage.englishLevelDDL.getText()).eq(user[property].englishLevel);
         });
         it('T-Shirt is correct', function() {
-            expect(SettingsProfilePage.tShirtSizeDDLValue.getAttribute('title')).eq(user[property].TShirtSize);  // ?????????????????
+            expect(SettingsProfilePage.tShirtSizeDDLValue.getAttribute('title')).eq(user[property].TShirtSize);
         });
     });
 }
