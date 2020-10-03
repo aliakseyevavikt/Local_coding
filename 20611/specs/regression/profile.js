@@ -68,7 +68,7 @@ describe('Verify that header is present', () => {
   });
 
   it('TC-063 Check Profile -> Country value ', function () {
-    expect(SettingsProfile.countryFieldDDL.getAttribute('title')).to.equal(user.learner.countryName);
+    expect(SettingsProfile.countryFieldDDL.getAttribute('title')).to.equal(user.learner.country);
   });
 
   it('TC-064 Check Profile -> English Level value ', function () {
