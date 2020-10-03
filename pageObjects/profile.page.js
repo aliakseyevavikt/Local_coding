@@ -1,5 +1,4 @@
 import BasePage from './Base.page';
-import { WAIT_TIME_MEDIUM } from '../testData/waitTimes';
 
 class ProfilePage extends BasePage {
   get headerProfile() {
@@ -95,7 +94,7 @@ class ProfilePage extends BasePage {
   }
 
   get settingsLink() {
-    return $$('.ant-dropdown-menu-item')[1];
+    return $('[data-qa="settings"]');
   }
 
   createDayReport() {

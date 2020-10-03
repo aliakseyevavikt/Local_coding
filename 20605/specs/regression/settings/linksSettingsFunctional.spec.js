@@ -4,7 +4,7 @@ import ProfilePage from '../../../../pageObjects/profile.page';
 import TopMenuPage from '../../../../pageObjects/topMenu.page';
 import LinksPage from '../../../../pageObjects/settingsLinks.page';
 import { linksSettings } from '../../../testResult/linksSettings';
-import { clearValue } from '../../../helpers/clearValue';
+import { clearValue } from '../../../../helpers/clearValue';
 
 before(() => {
   LoginPage.open();

@@ -1,4 +1,4 @@
-export const expectedProfileSettings = {
+export const profileSettingsTestResult = {
   firstLastNameMin: 'A',
   firstLastNameMax: `${'a'.repeat(20)}`,
   firstLastName3: 'a\'sssa-',
