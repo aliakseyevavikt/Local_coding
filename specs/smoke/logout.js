@@ -4,8 +4,9 @@ import user from '../../testData/userRoles';
 import waitTime from '../../testData/waitTimes';
 import { loginPageTestResult } from '../../testResult/loginPage.testResult';
 
-describe('LOGOUT FUNCTIONALITY SMOKE', function() {
-  for (let property in user) {
+for (let property in user) {
+
+  describe('[smoke] LOGOUT FUNCTIONALITY SMOKE', function() {
 
     before(() => {
       LoginPage.open();
@@ -19,5 +20,5 @@ describe('LOGOUT FUNCTIONALITY SMOKE', function() {
     it(`${property} can logout`, function() {
       expect(LoginPage.headerLogin.getText()).eq(loginPageTestResult.header);
     });
+  });
   }
-});

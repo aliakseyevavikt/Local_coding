@@ -5,7 +5,7 @@ import user from '../../testData/userRoles';
 import waitTime from '../../testData/waitTimes';
 
   for (let property in user) {
-    describe('LOGIN FUNCTIONALITY', function() {
+    describe('[smoke] LOGIN FUNCTIONALITY', function() {
       before(() => {
         LoginPage.open();
         LoginPage.login(user[property].email, user[property].password);
