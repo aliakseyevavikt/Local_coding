@@ -154,8 +154,8 @@ for (let property in user) {
         it('English Level is correct', function() {
             expect(SettingsProfilePage.englishLevelDDL.getText()).eq(user[property].englishLevel);
         });
-        // it('T-Shirt is correct', function () {
-        //     expect(SettingsProfilePage.tShirtSizeDDL.getValue()).eq(user[property].TShirtSize);  // ?????????????????
-        // });
+        it('T-Shirt is correct', function() {
+            expect(SettingsProfilePage.tShirtSizeDDLValue.getAttribute('title')).eq(user[property].TShirtSize);  // ?????????????????
+        });
     });
 }
