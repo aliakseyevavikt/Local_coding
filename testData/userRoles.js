@@ -1,27 +1,4 @@
 const userRoles = {
-  new: {
-    email: 'new@qa6.us',
-    password: 'newnew',
-    firstName: 'NewFirst',
-    lastName: 'NewLast',
-    phone: '17775551121',
-    about: 'QA Engineer',
-    goals: 'no goals',
-    englishLevel: 'Advanced',
-    countryName: 'USA',
-  },
-  new2: {
-    email: 'new2@qa6.us',
-    password: 'newnew',
-    firstName: 'NewFirst',
-    lastName: 'NewLast',
-    phone: '17775551121',
-    about: 'QA Engineer',
-    goals: 'no goals',
-    englishLevel: 'Advanced',
-    countryName: 'USA',
-  },
-
   admin: {
     email: 'admin@qa6.us',
     password: 'admin',
@@ -31,20 +8,22 @@ const userRoles = {
     about: 'QA Engineer',
     goals: 'no goals',
     englishLevel: 'Advanced',
-    countryName: 'USA',
-    id: '5f1e82dc303ca500ed657484',
+    country: 'United States',
+    id: '5f77b5dfad929300f20f06de',
+    TShirtSize: 'Women - S',
   },
-    adminUpdatePassword: {
-    email: 'adminpassword@us.com',
-    oldPassword: 'admin',
-    newPassword: 'newPassword',
-    firstName: 'AdminFirstName',
-    lastName: 'AdminLastName',
-    phone: '17775551122',
-    about: '123123',
-    goals: '123123',
-    englishLevel: 'Pre-Intermediate',
-    countryName: 'USA',
+
+  new: {
+    email: 'new@qa6.us',
+    password: 'newnew',
+    firstName: 'NewFirst',
+    lastName: 'NewLast',
+    phone: '17775551121',
+    about: 'QA Engineer',
+    goals: 'no goals',
+    englishLevel: 'Advanced',
+    country: 'United States',
+    TShirtSize: 'Women - S',
   },
 
   learner: {
@@ -57,7 +36,8 @@ const userRoles = {
     about: 'QA Engineer',
     goals: 'no goals',
     englishLevel: 'Advanced',
-    countryName: 'United States',
+    country: 'United States',
+    TShirtSize: 'Women - S',
   },
 
   student: {
@@ -69,7 +49,8 @@ const userRoles = {
     about: 'QA Engineer',
     goals: 'no goals',
     englishLevel: 'Advanced',
-    countryName: 'USA',
+    country: 'United States',
+    TShirtSize: 'Women - S',
   },
 };
 

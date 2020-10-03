@@ -1,4 +1,4 @@
-export const expectedProfileSettings = {
+export const profileSettingsTestData = {
   firstLastNameMin: 'A',
   firstLastNameMax: `${'a'.repeat(20)}`,
   firstLastName3: 'a\'sssa-',
@@ -10,6 +10,6 @@ export const expectedProfileSettings = {
   countryFiled: 'Canada',
   englishLevelFieldCurrent: 'Advanced',
   englishLevelField: 'Proficient',
-  tShirtSizeFieldCurrent: "Men/Unisex - XS",
-  tShirtSizeField: 'Men/Unisex - S'
-}
+  tShirtSizeFieldCurrent: 'Men/Unisex - XS',
+  tShirtSizeField: 'Men/Unisex - S',
+};

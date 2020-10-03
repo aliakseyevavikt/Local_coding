@@ -65,14 +65,12 @@ class settingsProfilePage extends BasePage {
     return $('[data-qa="tShirtSize"]');
   }
 
-  get saveBTN() {
-    return $('.ant-btn.ant-btn-primary');
+  get tShirtSizeDDLValue() {
+    return $('[data-qa="tShirtSize"] span.ant-select-selection-item');
   }
 
-  changeDataAtProfile(firstName, lastName) {
-    this.firstNameIF.setValue(firstName);
-    this.lastNameIF.setValue(lastName);
-    this.saveBTN.click();
+  get saveBTN() {
+    return $('.ant-btn.ant-btn-primary');
   }
 }
 export default new settingsProfilePage();
