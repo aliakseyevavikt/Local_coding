@@ -17,7 +17,7 @@ describe('LOGOUT FUNCTIONALITY SMOKE', function() {
     });
 
     it(`${property} can logout`, function() {
-      expect((LoginPage.headerLogin).getText()).eq(loginPageTestResult.header);
+      expect(LoginPage.headerLogin.getText()).eq(loginPageTestResult.header);
     });
   }
 });
