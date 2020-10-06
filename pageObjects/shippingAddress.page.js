@@ -100,9 +100,9 @@ class ShippingAddressPage extends BasePage {
     return $$('.ant-select-item-option-content');
   }
 
-  goToShippingAddressPageAsAdmin() {
+  goToShippingAddressPageAsLearner() {
     LoginPage.open();
-    LoginPage.login(user.admin.email, user.admin.password);
+    LoginPage.login(user.learner.email, user.learner.password);
     ProfilePage.dropDownUserMenu.click();
     TopMenuPage.dropDownMenuSettings.click();
     this.shippingAddressLink.click();
@@ -138,7 +138,7 @@ class ShippingAddressPage extends BasePage {
 
   submitShippingAddress() {
     this.clearShippingAddressInputFields();
-    const name = `${user.admin.firstName} ${user.admin.lastName}`;
+    const name = `${user.learner.firstName} ${user.learner.lastName}`;
     this.fullNameField.setValue(name);
     this.selectRandomCountry();
     const country = this.countryFieldValue.getAttribute('title');
