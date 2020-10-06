@@ -1,22 +1,22 @@
-import RegisterPage from '../../pageObjects/register.page';
-import userFake from '../../testData/userFake';
-import RegisterStep2 from '../../pageObjects/registerStep2.page';
-import ProfilePage from '../../pageObjects/profile.page';
-import SettingsPasswordPage from '../../pageObjects/settingsPassword.page';
-import LoginPage from '../../pageObjects/login.page';
-import { userDelete } from '../../helpers/axios/deleteNewUserByAxios';
-import { roles } from '../../testResult/updatePassword.testResult';
-import { userUpdateRole } from '../../helpers/axios/updateUserRoleByAxios';
+import RegisterPage from '../../../pageObjects/register.page';
+import userFake from '../../../testData/userFake';
+import RegisterStep2 from '../../../pageObjects/registerStep2.page';
+import ProfilePage from '../../../pageObjects/profile.page';
+import SettingsPasswordPage from '../../../pageObjects/settingsPassword.page';
+import LoginPage from '../../../pageObjects/login.page';
+import { userDelete } from '../../../helpers/axios/deleteNewUserByAxios';
+import { roles } from '../../../testResult/settings/updatePassword.testResult';
+import { userUpdateRole } from '../../../helpers/axios/updateUserRoleByAxios';
 
-describe('NEW USER CHANGE PASSWORD', function () {
-  before(function () {
+describe('NEW USER CHANGE PASSWORD', function() {
+  before(function() {
     RegisterPage.open();
     RegisterPage.registerUser(userFake);
     RegisterStep2.registerUserStep2(userFake);
     SettingsPasswordPage.open(process.env.RANDOMUSER_ID);
   });
 
-  it('New user stays logged in after his password has been changed', function () {
+  it('New user stays logged in after his password has been changed', function() {
     SettingsPasswordPage.updatePassword(userFake.password, userFake.newPassword);
     expect(ProfilePage.dropDownUserMenu.isDisplayed()).true;
   });

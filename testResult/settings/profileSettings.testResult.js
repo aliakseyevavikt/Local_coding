@@ -1,4 +1,4 @@
-const profileSettings = {
+const profileSettingsTestResult = {
     firstName: 'First Name',
     lastName: 'Last Name',
     phone: 'Phone',
@@ -10,4 +10,4 @@ const profileSettings = {
     saveBTN: 'Save',
 };
 
-export {profileSettings};
+export { profileSettingsTestResult };
