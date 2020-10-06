@@ -4,7 +4,8 @@ import waitTime from '../../../testData/waitTimes';
 import user from '../../../testData/userRoles';
 import { emptyField } from '../../../testData/login.testData';
 
-describe('LOGIN PAGE (NEGATIVE SCENARIOS)', function() {
+describe('LOGIN PAGE (Npull' +
+  'EGATIVE SCENARIOS)', function() {
   beforeEach(() => {
     LoginPage.open();
   });
