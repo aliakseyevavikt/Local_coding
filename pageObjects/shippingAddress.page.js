@@ -1,8 +1,6 @@
 import BasePage from './Base.page';
 import LoginPage from './login.page.js';
-import user from '../testData/userRoles';
 import TopMenuPage from './topMenu.page';
-import users from '../testData/userFake';
 import ProfilePage from './profile.page';
 
 class ShippingAddressPage extends BasePage {
@@ -89,7 +87,7 @@ class ShippingAddressPage extends BasePage {
   }
 
   get shippingAddressLink() {
-    return $('[data-qa="shippingAddress"]')
+    return $('[data-qa="shippingAddress"]');
   }
 
   get countryOptions() {
@@ -100,9 +98,9 @@ class ShippingAddressPage extends BasePage {
     return $$('.ant-select-item-option-content');
   }
 
-  goToShippingAddressPageAsLearner() {
+  goToShippingAddressPageAs(email, password) {
     LoginPage.open();
-    LoginPage.login(user.learner.email, user.learner.password);
+    LoginPage.login(email, password);
     ProfilePage.dropDownUserMenu.click();
     TopMenuPage.dropDownMenuSettings.click();
     this.shippingAddressLink.click();
@@ -130,46 +128,32 @@ class ShippingAddressPage extends BasePage {
   }
 
   selectRandomStateProvince() {
-    const l = 11;
-    const n = Math.floor(Math.random() * l) + 11;
+    const l = 5;
+    const n = Math.floor(Math.random() * l);
     this.expandStateProvinceListBtn.click();
     return this.stateProvinceOptions[n].click();
   }
 
-  submitShippingAddress() {
+  submitShippingAddress(firstName, lastName, streetAddress, city, postalCode, phone) {
     this.clearShippingAddressInputFields();
-    const name = `${user.learner.firstName} ${user.learner.lastName}`;
-    this.fullNameField.setValue(name);
-    this.selectRandomCountry();
-    const country = this.countryFieldValue.getAttribute('title');
-    const streetAddress = users.shippingStreetAddress;
+    this.fullNameField.setValue(`${firstName} ${lastName}`);
     this.streetAddressField.setValue(streetAddress);
-    const city = users.shippingCity;
     this.cityField.setValue(city);
     this.selectRandomStateProvince();
-    const stateProvince = this.stateProvinceValue.getAttribute('title');
-    const postalCode = users.shippingPostalCode;
     this.postalCodeField.setValue(postalCode);
-    let contactPhone;
-    if (this.contactPhonePrefix.getText().length === 2) {
-      contactPhone = users.phone;
-    } else {
-      contactPhone = users.phone2;
-    }
-    this.contactPhoneField.setValue(contactPhone);
+    this.contactPhoneField.setValue(phone);
     this.saveAddressBtn.click();
-    return { name, country, streetAddress, city, stateProvince, postalCode, contactPhone };
+    return { firstName, lastName, streetAddress, city, postalCode, phone };
   }
 
   checkFieldsValues() {
-    const name = this.fullNameField.getValue();
-    const country = this.countryFieldValue.getAttribute('title');
+    const firstName = this.fullNameField.getValue().split(' ')[0];
+    const lastName = this.fullNameField.getValue().split(' ')[1];
     const streetAddress = this.streetAddressField.getValue();
     const city = this.cityField.getValue();
-    const stateProvince = this.stateProvinceValue.getAttribute('title');
     const postalCode = this.postalCodeField.getValue();
     const contactPhone = this.contactPhoneField.getValue();
-    return { name, country, streetAddress, city, stateProvince, postalCode, contactPhone };
+    return { firstName, lastName, streetAddress, city, postalCode, contactPhone };
   }
 }
 
