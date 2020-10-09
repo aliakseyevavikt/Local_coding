@@ -1,6 +1,5 @@
 import BasePage from './../pageObjects/Base.page';
-import RegisterStep2Page from './registerStep2.page';
-import WAIT_TIME_MEDIUM from '../testData/waitTimes';
+import waitTime from '../testData/waitTimes';
 
 class RegisterPage extends BasePage {
   get headerRegister() {
@@ -82,7 +81,7 @@ class RegisterPage extends BasePage {
   termsAndAgreements() {
     this.agreementCheckBox.click();
     this.termsAndAgreementsLink.click();
-    this.termsAndAgreementsLinkClose.waitForClickable({ timeout: WAIT_TIME_MEDIUM });
+    this.termsAndAgreementsLinkClose.waitForClickable({ timeout: waitTime.WAIT_TIME_MEDIUM });
     this.termsAndAgreementsLinkClose.click();
   }
 
@@ -92,7 +91,7 @@ class RegisterPage extends BasePage {
     this.email.setValue(data.email);
     this.password.setValue(data.password);
     this.agreementCheckBox.click();
-    this.registerBtn.waitForClickable(true)
+    this.registerBtn.waitForClickable(true);
     // this.termsAndAgreements();
     this.registerBtn.click();
   }

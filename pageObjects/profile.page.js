@@ -1,4 +1,5 @@
 import BasePage from './Base.page';
+import waitTime from '../testData/waitTimes';
 
 class ProfilePage extends BasePage {
   get headerProfile() {
@@ -99,7 +100,7 @@ class ProfilePage extends BasePage {
 
   createDayReport() {
     this.createDayReportBtn.click();
-    this.createDayReportBtnClose.waitForClickable({ timeout: WAIT_TIME_MEDIUM });
+    this.createDayReportBtnClose.waitForClickable({ timeout: waitTime.WAIT_TIME_MEDIUM });
     this.createDayReportBtnClose.click();
   }
 
@@ -109,7 +110,7 @@ class ProfilePage extends BasePage {
 
   logout() {
     this.dropDownUserMenu.click();
-    this.logoutLink.waitForDisplayed({ timeout: WAIT_TIME_MEDIUM });
+    this.logoutLink.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
     this.logoutLink.click();
   }
 
