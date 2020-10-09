@@ -18,107 +18,107 @@ describe('PROFILE (SETTINGS) LAYOUT', function() {
 
     describe('GENERAL LAYOUT', function() {
         it('"First Name" title should be display', function() {
-            expect(SettingsProfilePage.firstNameIFTitle.isDisplayed());
+            expect(SettingsProfilePage.firstNameLabel.isDisplayed());
         });
 
         it('"First Name" title has label with correct text', function() {
-            expect(SettingsProfilePage.firstNameIFTitle.getText()).eq(profileSettingsTestResult.firstName);
+            expect(SettingsProfilePage.firstNameLabel.getText()).eq(profileSettingsTestResult.firstName);
         });
 
         it('"First Name" input field should be display', function() {
-            expect(SettingsProfilePage.firstNameIF.isDisplayed()).true;
+            expect(SettingsProfilePage.firstNameField.isDisplayed()).true;
         });
 
         it('"Last Name" title should be display', function() {
-            expect(SettingsProfilePage.lastNameIFTitle.isDisplayed()).true;
+            expect(SettingsProfilePage.lastNameLabel.isDisplayed()).true;
         });
 
         it('"Last Name" title has label with correct text', function() {
-            expect(SettingsProfilePage.lastNameIFTitle.getText()).eq(profileSettingsTestResult.lastName);
+            expect(SettingsProfilePage.lastNameLabel.getText()).eq(profileSettingsTestResult.lastName);
         });
 
         it('"Last Name" input field should be display', function() {
-            expect(SettingsProfilePage.lastNameIF.isDisplayed()).true;
+            expect(SettingsProfilePage.lastNameField.isDisplayed()).true;
         });
 
         it('"Phone" title should be display', function() {
-            expect(SettingsProfilePage.phoneIFTitle.isDisplayed()).true;
+            expect(SettingsProfilePage.phoneLabel.isDisplayed()).true;
         });
 
         it('"Phone" title has label with correct text', function() {
-            expect(SettingsProfilePage.phoneIFTitle.getText()).eq(profileSettingsTestResult.phone);
+            expect(SettingsProfilePage.phoneLabel.getText()).eq(profileSettingsTestResult.phone);
         });
 
         it('"Phone" input field should be display', function() {
-            expect(SettingsProfilePage.phoneIF.isDisplayed()).true;
+            expect(SettingsProfilePage.phoneField.isDisplayed()).true;
         });
 
         it('"About" title should be display', function() {
-            expect(SettingsProfilePage.aboutIFTitle.isDisplayed()).true;
+            expect(SettingsProfilePage.aboutLabel.isDisplayed()).true;
         });
 
         it('"About" title has label with correct text', function() {
-            expect(SettingsProfilePage.aboutIFTitle.getText()).eq(profileSettingsTestResult.about);
+            expect(SettingsProfilePage.aboutLabel.getText()).eq(profileSettingsTestResult.about);
         });
 
         it('"About" input field should be display', function() {
-            expect(SettingsProfilePage.aboutFieldRIF.isDisplayed()).true;
+            expect(SettingsProfilePage.aboutField.isDisplayed()).true;
         });
 
         it('"My goals" title should be display', function() {
-            expect(SettingsProfilePage.myGoalsIFTitle.isDisplayed()).true;
+            expect(SettingsProfilePage.myGoalsLabel.isDisplayed()).true;
         });
 
         it('"My goals" title has label with correct text', function() {
-            expect(SettingsProfilePage.myGoalsIFTitle.getText()).eq(profileSettingsTestResult.myGoals);
+            expect(SettingsProfilePage.myGoalsLabel.getText()).eq(profileSettingsTestResult.myGoals);
         });
 
         it('"My goals" input field should be display', function() {
-            expect(SettingsProfilePage.myGoalsRIF.isDisplayed()).true;
+            expect(SettingsProfilePage.myGoalsField.isDisplayed()).true;
         });
 
         it('"Country" title should be display', function() {
-            expect(SettingsProfilePage.countryFieldDDBTitle.isDisplayed()).true;
+            expect(SettingsProfilePage.countryFieldLabel.isDisplayed()).true;
         });
 
         it('"Country" title has label with correct text', function() {
-            expect(SettingsProfilePage.countryFieldDDBTitle.getText()).eq(profileSettingsTestResult.country);
+            expect(SettingsProfilePage.countryFieldLabel.getText()).eq(profileSettingsTestResult.country);
         });
 
         it('"Country" input field should be display', function() {
-            expect(SettingsProfilePage.countryFieldDDL.isDisplayed()).true;
+            expect(SettingsProfilePage.countryField.isDisplayed()).true;
         });
 
         it('"English level" title should be display', function() {
-            expect(SettingsProfilePage.englishLevelDDBTitle.isDisplayed()).true;
+            expect(SettingsProfilePage.englishLevelTitle.isDisplayed()).true;
         });
 
         it('"English level" title has label with correct text', function() {
-            expect(SettingsProfilePage.englishLevelDDBTitle.getText()).eq(profileSettingsTestResult.englishLevel);
+            expect(SettingsProfilePage.englishLevelTitle.getText()).eq(profileSettingsTestResult.englishLevel);
         });
 
         it('"English level" input field should be display', function() {
-            expect(SettingsProfilePage.englishLevelDDL.isDisplayed()).true;
+            expect(SettingsProfilePage.englishLevelField.isDisplayed()).true;
         });
 
         it('"T-Shirt size" title should be display', function() {
-            expect(SettingsProfilePage.tShirtSizeDDBTitle.isDisplayed()).true;
+            expect(SettingsProfilePage.tShirtSizeLabel.isDisplayed()).true;
         });
 
         it('"T-Shirt size" title has label with correct text', function() {
-            expect(SettingsProfilePage.tShirtSizeDDBTitle.getText()).eq(profileSettingsTestResult.tShirtSize);
+            expect(SettingsProfilePage.tShirtSizeLabel.getText()).eq(profileSettingsTestResult.tShirtSize);
         });
 
         it('"T-Shirt size" input field should be display', function() {
-            expect(SettingsProfilePage.tShirtSizeDDL.isDisplayed()).true;
+            expect(SettingsProfilePage.tShirtSizeField.isDisplayed()).true;
         });
 
         it('"Save" button is display', function() {
-            expect(SettingsProfilePage.saveBTN.isDisplayed()).true;
+            expect(SettingsProfilePage.saveProfileButton.isDisplayed()).true;
         });
 
         it('"Save" button has correct text', function() {
-            expect(SettingsProfilePage.saveBTN.getText()).eq(profileSettingsTestResult.saveBTN);
+            expect(SettingsProfilePage.saveProfileButton.getText()).eq(profileSettingsTestResult.saveBTN);
         });
     });
 });
@@ -134,28 +134,28 @@ for (let property in user) {
         });
 
         it('First name is correct', function() {
-            expect(SettingsProfilePage.firstNameIF.getValue()).eq(user[property].firstName);
+            expect(SettingsProfilePage.firstNameField.getValue()).eq(user[property].firstName);
         });
         it('Last name is correct', function() {
-            expect(SettingsProfilePage.lastNameIF.getValue()).eq(user[property].lastName);
+            expect(SettingsProfilePage.lastNameField.getValue()).eq(user[property].lastName);
         });
         it('Phone is correct', function() {
-            expect(SettingsProfilePage.phoneIF.getValue()).eq(user[property].phone);
+            expect(SettingsProfilePage.phoneField.getValue()).eq(user[property].phone);
         });
         it('About is correct', function() {
-            expect(SettingsProfilePage.aboutFieldRIF.getValue()).eq(user[property].about);
+            expect(SettingsProfilePage.aboutField.getValue()).eq(user[property].about);
         });
         it('My goals is correct', function() {
-            expect(SettingsProfilePage.myGoalsRIF.getValue()).eq(user[property].goals);
+            expect(SettingsProfilePage.myGoalsField.getValue()).eq(user[property].goals);
         });
         it('Country is correct', function() {
-            expect(SettingsProfilePage.countryFieldDDL.getText()).eq(user[property].country);
+            expect(SettingsProfilePage.countryField.getText()).eq(user[property].country);
         });
         it('English Level is correct', function() {
-            expect(SettingsProfilePage.englishLevelDDL.getText()).eq(user[property].englishLevel);
+            expect(SettingsProfilePage.englishLevelField.getText()).eq(user[property].englishLevel);
         });
         it('T-Shirt is correct', function() {
-            expect(SettingsProfilePage.tShirtSizeDDLValue.getAttribute('title')).eq(user[property].TShirtSize);
+            expect(SettingsProfilePage.tShirtSizeValue.getAttribute('title')).eq(user[property].TShirtSize);
         });
     });
 }

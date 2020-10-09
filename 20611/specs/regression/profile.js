@@ -48,34 +48,34 @@ describe('Verify that header is present', () => {
   it('TC-058 Check Profile -> First Name value ', function () {
     ProfilePage.dropDownUserMenu.click();
     ProfilePage.settingsLink.click();
-    expect(SettingsProfile.firstNameIF.getValue()).to.equal(user.learner.firstName);
+    expect(SettingsProfile.firstNameField.getValue()).to.equal(user.learner.firstName);
   });
 
   it('TC-059 Check Profile -> Last Name value ', function () {
-    expect(SettingsProfile.lastNameIF.getValue()).to.equal(user.learner.lastName);
+    expect(SettingsProfile.lastNameField.getValue()).to.equal(user.learner.lastName);
   });
 
   it('TC-060 Check Profile -> Phone value ', function () {
-    expect(SettingsProfile.phoneIF.getValue()).to.equal(user.learner.phone);
+    expect(SettingsProfile.phoneField.getValue()).to.equal(user.learner.phone);
   });
 
   it('TC-061 Check Profile -> About value ', function () {
-    expect(SettingsProfile.aboutFieldRIF.getValue()).to.equal(user.learner.about);
+    expect(SettingsProfile.aboutField.getValue()).to.equal(user.learner.about);
   });
 
   it('TC-062 Check Profile -> My Goals value ', function () {
-    expect(SettingsProfile.myGoalsRIF.getValue()).to.equal(user.learner.goals);
+    expect(SettingsProfile.myGoalsField.getValue()).to.equal(user.learner.goals);
   });
 
   it('TC-063 Check Profile -> Country value ', function () {
-    expect(SettingsProfile.countryFieldDDL.getAttribute('title')).to.equal(user.learner.country);
+    expect(SettingsProfile.countryField.getAttribute('title')).to.equal(user.learner.country);
   });
 
   it('TC-064 Check Profile -> English Level value ', function () {
-    expect(SettingsProfile.englishLevelDDL.getAttribute('title')).to.equal(user.learner.englishLevel);
+    expect(SettingsProfile.englishLevelField.getAttribute('title')).to.equal(user.learner.englishLevel);
   });
 
   it('TC-065 Check Profile -> T-Shirt Size field exists ', function () {
-    expect(SettingsProfile.tShirtSizeDDL).to.exist;
+    expect(SettingsProfile.tShirtSizeField).to.exist;
   });
 });
