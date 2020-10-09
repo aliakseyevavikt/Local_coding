@@ -2,7 +2,7 @@ import FooterPage from '../../pageObjects/footer.page';
 import ContactUsPage from '../../pageObjects/contactUs.page';
 import { contactUsTestResult } from '../../testResult/contactUs.testResult';
 
-describe('FOOTER SMOKE', function() {
+describe('[SMOKE] FOOTER', function() {
   before(() => {
     FooterPage.open();
   });

@@ -1,17 +1,17 @@
 import LoginPage from '../../../pageObjects/login.page';
 import { loginPageTestResult } from '../../../testResult/loginPage.testResult';
 
-describe('LOGIN PAGE', function () {
+describe('[REGRESSION] LOGIN PAGE', function() {
   before(() => {
     LoginPage.open();
   });
 
-  describe('HEADER', function () {
-    it('Header should be displayed', function () {
+  describe('HEADER', function() {
+    it('Header should be displayed', function() {
       expect(LoginPage.headerLogin.isDisplayed()).true;
     });
 
-    it('Header should have correct text', function () {
+    it('Header should have correct text', function() {
       expect(LoginPage.headerLogin.getText()).eq(loginPageTestResult.header);
     });
   });

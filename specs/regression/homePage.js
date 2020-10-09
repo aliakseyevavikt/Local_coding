@@ -1,7 +1,7 @@
 import HomePage from '../../pageObjects/home.page';
 import { homePageTestResult } from '../../testResult/homePage.testResult';
 
-describe('HOME PAGE REGRESSION', function() {
+describe('[REGRESSION] HOME PAGE', function() {
   before(() => {
     HomePage.open();
   });

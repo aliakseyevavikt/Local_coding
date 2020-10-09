@@ -2,17 +2,17 @@ import LoginPage from '../../../pageObjects/login.page';
 import user from '../../../testData/userRoles';
 import { anyNumbers, anySymbols, upperLowerLetters } from '../../../testData/login.testData';
 
-describe('LOGIN PAGE (FUNCTIONAL)', function () {
+describe('[REGRESSION] LOGIN PAGE (FUNCTIONAL)', function() {
   before(() => {
     LoginPage.open();
   });
 
-  it('Should verify that Email field accept any letters (Upper and lower)', function () {
+  it('Should verify that Email field accept any letters (Upper and lower)', function() {
     LoginPage.login(upperLowerLetters.email, user.admin.password);
     expect(LoginPage.loginBtn.isDisplayed()).true;
   });
 
-  it('Should verify that Email field accept any numbers', function () {
+  it('Should verify that Email field accept any numbers', function() {
     browser.refresh();
     LoginPage.login(anyNumbers.email, user.admin.password);
     expect(LoginPage.loginBtn.isDisplayed()).true;

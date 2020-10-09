@@ -2,13 +2,13 @@ import ContactUsPage from '../../pageObjects/contactUs.page';
 import userFake from '../../testData/userFake';
 import { contactUsTestResult } from '../../testResult/contactUs.testResult';
 
-describe('CONTACT US PAGE, SMOKE', () => {
+describe('[SMOKE] CONTACT US PAGE', () => {
   before('Before', () => {
     ContactUsPage.open();
   });
 
-  describe('CONTACT US PAGE FIELDS ACCEPT DATA', function () {
-    it('inputNameField should accept data correct', function () {
+  describe('CONTACT US PAGE FIELDS ACCEPT DATA', function() {
+    it('inputNameField should accept data correct', function() {
       ContactUsPage.nameInputFld.setValue(userFake.firstName);
       expect(ContactUsPage.nameInputFld.getValue()).eq(userFake.firstName);
     });
