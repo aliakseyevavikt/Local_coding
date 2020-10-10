@@ -134,6 +134,7 @@ class settingsProfilePage extends BasePage {
       this.phoneField.getValue(),
       this.aboutField.getValue(),
       this.myGoalsField.getValue(),
+      this.englishLevelField.getText(),
     ];
   }
 }

@@ -27,13 +27,15 @@ describe('[SMOKE] PROFILE (SETTINGS)', function() {
       userFake.aboutUpdated,
       userFake.goalsUpdated,
     );
+    const englishResult = SettingsProfilePage.englishLevelField.getText();
     ProfilePage.logout();
     SettingsProfilePage.goToSettingsProfilePage(userFake.email, userFake.password);
     expect(SettingsProfilePage.checkAllFieldsValues()).to.deep.equal([userFake.firstNameUpdated,
       userFake.lastNameUpdated,
       userFake.phoneUpdated,
       userFake.aboutUpdated,
-      userFake.goalsUpdated]);
+      userFake.goalsUpdated,
+      englishResult]);
   });
 
   describe('Profile page information can be changed by LEARNER', function() {
@@ -51,13 +53,15 @@ describe('[SMOKE] PROFILE (SETTINGS)', function() {
         userFake.about,
         userFake.goals,
       );
+      const englishResult = SettingsProfilePage.englishLevelField.getText();
       ProfilePage.logout();
       SettingsProfilePage.goToSettingsProfilePage(userFake.email, userFake.password);
       expect(SettingsProfilePage.checkAllFieldsValues()).to.deep.equal([userFake.firstName,
         userFake.lastName,
         userFake.phone,
         userFake.about,
-        userFake.goals]);
+        userFake.goals,
+        englishResult]);
     });
   });
 
@@ -76,13 +80,15 @@ describe('[SMOKE] PROFILE (SETTINGS)', function() {
         userFake.aboutUpdated,
         userFake.goalsUpdated,
       );
+      const englishResult = SettingsProfilePage.englishLevelField.getText();
       ProfilePage.logout();
       SettingsProfilePage.goToSettingsProfilePage(userFake.email, userFake.password);
       expect(SettingsProfilePage.checkAllFieldsValues()).to.deep.equal([userFake.firstNameUpdated,
         userFake.lastNameUpdated,
         userFake.phoneUpdated,
         userFake.aboutUpdated,
-        userFake.goalsUpdated]);
+        userFake.goalsUpdated,
+        englishResult]);
     });
   });
 
