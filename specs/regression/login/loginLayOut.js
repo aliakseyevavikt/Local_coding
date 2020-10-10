@@ -1,31 +1,31 @@
 import LoginPage from '../../../pageObjects/login.page';
 import { loginPageTestResult } from '../../../testResult/loginPage.testResult';
 
-describe('LOGIN PAGE', function () {
+describe('[REGRESSION] LOGIN PAGE', function() {
   before(() => {
     LoginPage.open();
   });
 
-  describe('HEADER', function () {
-    it('Header should be displayed', function () {
+  describe('HEADER', function() {
+    it('Header should be displayed', function() {
       expect(LoginPage.headerLogin.isDisplayed()).true;
     });
 
-    it('Header should have correct text', function () {
+    it('Header should have correct text', function() {
       expect(LoginPage.headerLogin.getText()).eq(loginPageTestResult.header);
     });
   });
 
-  describe('ALL ELEMENTS ARE DISPLAYED', function () {
-    it('Should verify that "Mail" icon is displayed', function () {
+  describe('ALL ELEMENTS ARE DISPLAYED', function() {
+    it('Should verify that "Mail" icon is displayed', function() {
       expect(LoginPage.mailIcon.isDisplayed()).true;
     });
 
-    it('Should verify that "Email" input field is displayed', function () {
+    it('Should verify that "Email" input field is displayed', function() {
       expect(LoginPage.inputUsername.isDisplayed()).true;
     });
 
-    it('Should verify that "Email" input field has placeholder "Email"', function () {
+    it('Should verify that "Email" input field has placeholder "Email"', function() {
       expect(LoginPage.inputUsername.getAttribute('placeholder')).eq(loginPageTestResult.emailPlaceholder);
     });
 

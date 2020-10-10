@@ -3,7 +3,7 @@ import LoginPage from '../../pageObjects/login.page';
 import user from '../../testData/userRoles';
 import { dailyReportTestData } from '../../testData/dailyReport.testData';
 
-describe('DAILY REPORTS FUNCTIONALITY', function() {
+describe('[SMOKE] DAILY REPORTS FUNCTIONALITY', function() {
   beforeEach(() => {
     LoginPage.open();
   });

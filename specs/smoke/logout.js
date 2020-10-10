@@ -6,7 +6,7 @@ import { loginPageTestResult } from '../../testResult/loginPage.testResult';
 
 for (let property in user) {
 
-  describe('[smoke] LOGOUT FUNCTIONALITY SMOKE', function() {
+  describe('[SMOKE] LOGOUT FUNCTIONALITY SMOKE', function() {
 
     before(() => {
       LoginPage.open();

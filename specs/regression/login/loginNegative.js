@@ -1,11 +1,9 @@
 import LoginPage from '../../../pageObjects/login.page';
-import { invalidUserCredentials } from '../../../testData/login.testData';
 import waitTime from '../../../testData/waitTimes';
 import user from '../../../testData/userRoles';
-import { emptyField } from '../../../testData/login.testData';
+import { emptyField, invalidUserCredentials } from '../../../testData/login.testData';
 
-describe('LOGIN PAGE (Npull' +
-  'EGATIVE SCENARIOS)', function() {
+describe('[REGRESSION] LOGIN PAGE (NEGATIVE SCENARIOS)', function() {
   beforeEach(() => {
     LoginPage.open();
   });
