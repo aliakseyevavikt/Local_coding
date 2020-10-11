@@ -116,7 +116,6 @@ class settingsProfilePage extends BasePage {
   //   return this.englishLevelOptions[n].click();
   // }
 
-
   changeProfilePageData(firstName, lastName, phone, about, goals) {
     this.clearProfileSettingsPageInputFields();
     this.firstNameField.setValue(firstName);
@@ -127,8 +126,16 @@ class settingsProfilePage extends BasePage {
     this.selectRandomEnglishLevel();
     // this.selectRandomTShirtSize();
     this.saveProfileButton.click();
-    return { firstName, lastName, phone, about, goals };
+  }
+
+  checkAllFieldsValues() {
+    return [this.firstNameField.getValue(),
+      this.lastNameField.getValue(),
+      this.phoneField.getValue(),
+      this.aboutField.getValue(),
+      this.myGoalsField.getValue(),
+      this.englishLevelField.getText(),
+    ];
   }
 }
-
 export default new settingsProfilePage();

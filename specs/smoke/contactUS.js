@@ -13,12 +13,12 @@ describe('[SMOKE] CONTACT US PAGE', () => {
       expect(ContactUsPage.nameInputFld.getValue()).eq(userFake.firstName);
     });
 
-    it('inputEmail field accepts data correct', function () {
+    it('inputEmail field accepts data correct', function() {
       ContactUsPage.emailInputFld.setValue(userFake.email);
       expect(ContactUsPage.emailInputFld.getValue()).eq(userFake.email);
     });
 
-    it('phone field accepts data correct', function () {
+    it('phone field accepts data correct', function() {
       ContactUsPage.phoneInputFld.setValue(userFake.phone);
       expect(ContactUsPage.phoneInputFld.getValue()).eq(userFake.phone);
     });

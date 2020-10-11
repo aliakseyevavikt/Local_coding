@@ -16,16 +16,16 @@ describe('[REGRESSION] LOGIN PAGE', function() {
     });
   });
 
-  describe('ALL ELEMENTS ARE DISPLAYED', function () {
-    it('Should verify that "Mail" icon is displayed', function () {
+  describe('ALL ELEMENTS ARE DISPLAYED', function() {
+    it('Should verify that "Mail" icon is displayed', function() {
       expect(LoginPage.mailIcon.isDisplayed()).true;
     });
 
-    it('Should verify that "Email" input field is displayed', function () {
+    it('Should verify that "Email" input field is displayed', function() {
       expect(LoginPage.inputUsername.isDisplayed()).true;
     });
 
-    it('Should verify that "Email" input field has placeholder "Email"', function () {
+    it('Should verify that "Email" input field has placeholder "Email"', function() {
       expect(LoginPage.inputUsername.getAttribute('placeholder')).eq(loginPageTestResult.emailPlaceholder);
     });
 

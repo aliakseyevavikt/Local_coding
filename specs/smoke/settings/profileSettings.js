@@ -8,6 +8,7 @@ import waitTime from '../../../testData/waitTimes';
 import userFake from '../../../testData/userFake';
 import { roles } from '../../../testResult/settings/updatePassword.testResult';
 import { userUpdateRole } from '../../../helpers/axios/updateUserRoleByAxios';
+import { userDelete } from '../../../helpers/axios/deleteNewUserByAxios';
 
 describe('[SMOKE] PROFILE (SETTINGS)', function() {
   before(function() {
@@ -26,11 +27,15 @@ describe('[SMOKE] PROFILE (SETTINGS)', function() {
       userFake.aboutUpdated,
       userFake.goalsUpdated,
     );
+    const englishResult = SettingsProfilePage.englishLevelField.getText();
     ProfilePage.logout();
-    LoginPage.open();
-    LoginPage.login(userFake.email, userFake.password);
-    TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
-    expect(ProfilePage.headerProfile.getText()).eq(userFake.firstNameUpdated + ' ' + userFake.lastNameUpdated);
+    SettingsProfilePage.goToSettingsProfilePage(userFake.email, userFake.password);
+    expect(SettingsProfilePage.checkAllFieldsValues()).to.deep.equal([userFake.firstNameUpdated,
+      userFake.lastNameUpdated,
+      userFake.phoneUpdated,
+      userFake.aboutUpdated,
+      userFake.goalsUpdated,
+      englishResult]);
   });
 
   describe('Profile page information can be changed by LEARNER', function() {
@@ -48,11 +53,15 @@ describe('[SMOKE] PROFILE (SETTINGS)', function() {
         userFake.about,
         userFake.goals,
       );
+      const englishResult = SettingsProfilePage.englishLevelField.getText();
       ProfilePage.logout();
-      LoginPage.open();
-      LoginPage.login(userFake.email, userFake.password);
-      TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
-      expect(ProfilePage.headerProfile.getText()).eq(userFake.firstName + ' ' + userFake.lastName);
+      SettingsProfilePage.goToSettingsProfilePage(userFake.email, userFake.password);
+      expect(SettingsProfilePage.checkAllFieldsValues()).to.deep.equal([userFake.firstName,
+        userFake.lastName,
+        userFake.phone,
+        userFake.about,
+        userFake.goals,
+        englishResult]);
     });
   });
 
@@ -71,11 +80,20 @@ describe('[SMOKE] PROFILE (SETTINGS)', function() {
         userFake.aboutUpdated,
         userFake.goalsUpdated,
       );
+      const englishResult = SettingsProfilePage.englishLevelField.getText();
       ProfilePage.logout();
-      LoginPage.open();
-      LoginPage.login(userFake.email, userFake.password);
-      TopMenuPage.userAvatarName.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
-      expect(ProfilePage.headerProfile.getText()).eq(userFake.firstNameUpdated + ' ' + userFake.lastNameUpdated);
+      SettingsProfilePage.goToSettingsProfilePage(userFake.email, userFake.password);
+      expect(SettingsProfilePage.checkAllFieldsValues()).to.deep.equal([userFake.firstNameUpdated,
+        userFake.lastNameUpdated,
+        userFake.phoneUpdated,
+        userFake.aboutUpdated,
+        userFake.goalsUpdated,
+        englishResult]);
     });
+  });
+
+  after('Should delete a user', async () => {
+    const res = await userDelete(userFake.email);
+    expect(res.success).eq(true);
   });
 });
