@@ -6,6 +6,7 @@ import RegisterStep2Page from '../../../pageObjects/registerStep2.page';
 import { userUpdateRole } from '../../../helpers/axios/updateUserRoleByAxios';
 import { roles } from '../../../testResult/settings/updatePassword.testResult';
 import { userDelete } from '../../../helpers/axios/deleteNewUserByAxios';
+import {dataOriginal, dataUpdated} from '../../../testData/shippingAddressUpdate.testData';
 
 before(function () {
   RegisterPage.open();
@@ -28,8 +29,7 @@ describe('UPDATING SHIPPING ADDRESS', function () {
     );
     ProfilePage.logout();
     ShippingAddressPage.goToShippingAddressPageAs(userFake.email, userFake.password);
-    expect(ShippingAddressPage.streetAddressField.getValue()).eq(userFake.ShippingStreetAddressUpdated);
-    expect(ShippingAddressPage.postalCodeField.getValue()).eq(userFake.shippingPostalCodeUpdated);
+    expect(ShippingAddressPage.checkIfTwoObjectsHaveSameData(dataUpdated, ShippingAddressPage.checkFieldsValues())).eq(true);
   });
 
   describe('Learner can update shipping address, user role will be update to learner', function () {
@@ -49,8 +49,7 @@ describe('UPDATING SHIPPING ADDRESS', function () {
       );
       ProfilePage.logout();
       ShippingAddressPage.goToShippingAddressPageAs(userFake.email, userFake.password);
-      expect(ShippingAddressPage.streetAddressField.getValue()).eq(userFake.shippingStreetAddress);
-      expect(ShippingAddressPage.postalCodeField.getValue()).eq(userFake.shippingPostalCode);
+      expect(ShippingAddressPage.checkIfTwoObjectsHaveSameData(dataOriginal, ShippingAddressPage.checkFieldsValues())).eq(true);
     });
   });
 
@@ -71,8 +70,7 @@ describe('UPDATING SHIPPING ADDRESS', function () {
       );
       ProfilePage.logout();
       ShippingAddressPage.goToShippingAddressPageAs(userFake.email, userFake.password);
-      expect(ShippingAddressPage.streetAddressField.getValue()).eq(userFake.ShippingStreetAddressUpdated);
-      expect(ShippingAddressPage.postalCodeField.getValue()).eq(userFake.shippingPostalCodeUpdated);
+      expect(ShippingAddressPage.checkIfTwoObjectsHaveSameData(dataUpdated, ShippingAddressPage.checkFieldsValues())).eq(true);
     });
   });
 
