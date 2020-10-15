@@ -9,6 +9,7 @@ const userFake = {
   password: faker.internet.password(),
   newPassword: faker.internet.password(),
   message: faker.lorem.words(5),
+  word: faker.lorem.words(1),
   shippingStreetAddress: faker.address.streetAddress(),
   ShippingStreetAddressUpdated: faker.address.streetAddress(),
   shippingCity: faker.address.city(),
