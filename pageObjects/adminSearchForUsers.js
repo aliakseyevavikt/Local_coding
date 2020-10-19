@@ -1,6 +1,11 @@
 import BasePage from './../pageObjects/Base.page';
 
 class AdminSearchForUsers extends BasePage {
+
+  get adminTopLink(){
+    return $$('.ant-dropdown-trigger.ant-dropdown-link')[0];
+  }
+
   get usersTopLink() {
     return $('[href="/users"]');
   }
@@ -42,6 +47,11 @@ class AdminSearchForUsers extends BasePage {
 
   get roleLabelText(){
     return $('.col-md-1')
+  }
+
+  searchForUsers(){
+    this.adminTopLink.click();
+    this.usersTopLink.click();
   }
 }
 
