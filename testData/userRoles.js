@@ -11,6 +11,11 @@ const userRoles = {
     country: 'United States',
     id: '5f77b5dfad929300f20f06de',
     TShirtSize: 'Women - S',
+    resume: 'https://docs.google.com/document/dnfkn',
+    facebook: 'https://www.facebook.com/',
+    linkedIn: 'https://www.linkedin.com/in/',
+    gitHub: 'https://github.com/',
+    codeWars: 'https://www.codewars.com/users/admin/badges/large',
   },
 
   new: {
